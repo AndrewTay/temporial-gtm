@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Temporial — Beachhead GTM &amp; Test Plan</title>
+<meta name="description" content="Go-to-market strategy for Temporial's non-human rigging moat: which beachheads to test, what to measure, the signals to double down on, and the signals to fold." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#06080d; --bg-2:#0a0d14;
+  --panel:rgba(13,17,25,.55); --panel-2:rgba(18,23,33,.66);
+  --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.18);
+  --ink:#eef2f7; --ink-2:#aeb9c9; --ink-3:#79849a;
+  --accent:#7cc4ff; --accent-2:#a9b8ff; --warm:#f0c478;
+  --good:#5ef0a8; --bad:#ff8a8a;
+  --grad:linear-gradient(100deg,#bfe4ff 0%,#7cc4ff 42%,#a9b8ff 100%);
+  --maxw:1180px;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --glass-blur:blur(16px) saturate(140%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg-glow{position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(820px 520px at 80% -8%, rgba(124,196,255,.12), transparent 60%),
+    radial-gradient(720px 600px at 4% 14%, rgba(169,184,255,.08), transparent 60%),
+    radial-gradient(900px 700px at 50% 118%, rgba(124,196,255,.06), transparent 60%);}
+.bg-vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(125% 125% at 50% 0%, transparent 56%, rgba(0,0,0,.55) 100%);}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:120;border-bottom:1px solid transparent;transition:background .35s,border-color .35s,backdrop-filter .35s}
+nav.scrolled{background:rgba(6,8,13,.62);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.brand .dot{width:24px;height:24px;border-radius:7px;background:var(--grad);box-shadow:0 0 18px rgba(124,196,255,.5)}
+.brand .wm{font-weight:600;font-size:1.02rem;letter-spacing:.04em}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .25s}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:980px){.nav-links{display:none}}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:clamp(52px,7vh,96px) 0;position:relative;z-index:1}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);opacity:.7}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.12}
+h2.title{font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:26ch;margin-bottom:16px}
+.lead{font-size:clamp(1rem,1.4vw,1.18rem);color:var(--ink-2);max-width:72ch;font-weight:300}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.muted{color:var(--ink-2)} .dim{color:var(--ink-3)}
+a.inline{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(124,196,255,.3)}
+a.inline:hover{color:#fff}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.sec-head .num{font-family:var(--mono);color:var(--accent);font-size:.8rem}
+.glass{background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
+
+/* hero */
+.hero{min-height:84svh;display:flex;align-items:center;text-align:center;padding:128px 0 56px}
+.hero-inner{max-width:62rem;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(2.1rem,4.8vw,3.7rem);margin:8px 0 22px;max-width:18ch}
+.hero .lead{margin:0 auto 30px;max-width:64ch;text-align:center}
+.pills{margin-top:10px;display:flex;gap:10px 12px;flex-wrap:wrap;justify-content:center}
+.pill{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--ink-2);border:1px solid var(--line);background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-radius:999px;padding:7px 14px}
+.pill b{color:var(--accent);font-weight:600}
+
+/* generic card */
+.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+@media(max-width:880px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+/* moat block */
+.moat{margin-top:26px;display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+@media(max-width:880px){.moat{grid-template-columns:1fr}}
+.moat .card h3{font-size:1.18rem;margin-bottom:10px}
+.vs-row{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.vs-row:first-of-type{border-top:0}
+.vs-row .who{font-weight:600;min-width:128px;font-size:.94rem}
+.vs-row .gap{font-size:.9rem;color:var(--ink-2);font-weight:300}
+.vs-row .gap b{color:var(--ink);font-weight:600}
+
+/* badges */
+.badge{font-family:var(--mono);font-size:.64rem;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:4px 10px;border:1px solid;display:inline-block;white-space:nowrap}
+.badge.primary{color:var(--accent);border-color:rgba(124,196,255,.5);background:rgba(124,196,255,.07)}
+.badge.parallel{color:var(--accent-2);border-color:rgba(169,184,255,.45);background:rgba(169,184,255,.06)}
+.badge.v2{color:var(--warm);border-color:rgba(240,196,120,.45);background:rgba(240,196,120,.06)}
+.badge.trap{color:var(--bad);border-color:rgba(255,138,138,.4);background:rgba(255,138,138,.06)}
+.badge.good{color:var(--good);border-color:rgba(94,240,168,.45);background:rgba(94,240,168,.06)}
+
+/* beachhead cards */
+.bh{border:1px solid var(--line);border-radius:18px;padding:clamp(18px,2.2vw,26px);background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);margin-top:18px}
+.bh.lead-bh{border-color:rgba(124,196,255,.3)}
+.bh-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.bh-head .bn{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);letter-spacing:.08em}
+.bh-head h3{font-size:1.3rem}
+.bh .who{color:var(--ink-2);font-weight:300;font-size:.96rem;max-width:80ch;margin:6px 0 16px}
+.bh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.bh-grid{grid-template-columns:1fr}}
+.bblock{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:rgba(10,13,20,.4)}
+.bblock .h{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.bblock.dd .h{color:var(--good)} .bblock.fold .h{color:var(--bad)}
+.bblock ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.bblock li{font-size:.88rem;color:var(--ink-2);font-weight:300;padding-left:16px;position:relative}
+.bblock li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.7}
+.bblock.dd li::before{background:var(--good)} .bblock.fold li::before{background:var(--bad)}
+.bblock li b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.chip{font-family:var(--mono);font-size:.68rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:7px;padding:4px 9px}
+
+/* tables */
+.tbl-wrap{margin-top:24px;border:1px solid var(--line);border-radius:14px;overflow:hidden;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:680px}
+th,td{text-align:left;padding:12px 15px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:500;background:rgba(124,196,255,.04)}
+tr:last-child td{border-bottom:0}
+td b{color:var(--ink)} td .mono{font-family:var(--mono);font-size:.82rem;color:var(--ink)}
+.tgt{color:var(--good);font-family:var(--mono);font-size:.82rem}
+
+/* metric / north star */
+.north{margin-top:24px;border:1px solid rgba(124,196,255,.3);border-radius:18px;padding:clamp(20px,2.6vw,30px);background:linear-gradient(180deg,rgba(124,196,255,.06),rgba(124,196,255,.01))}
+.north .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.north h3{font-size:clamp(1.3rem,2.4vw,1.7rem);max-width:24ch;margin-bottom:12px}
+.north p{color:var(--ink-2);font-weight:300;max-width:78ch}
+
+/* funnel */
+.funnel{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.fstep{flex:1;min-width:150px;border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(10,13,20,.4)}
+.fstep .n{font-family:var(--mono);font-size:.64rem;color:var(--ink-3);letter-spacing:.1em}
+.fstep .t{font-weight:600;font-size:.96rem;margin:4px 0 5px}
+.fstep .d{font-size:.82rem;color:var(--ink-2);font-weight:300}
+
+/* timeline */
+.timeline{margin-top:24px;display:flex;flex-direction:column;gap:2px}
+.tl{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--line)}
+.tl:first-child{border-top:0}
+.tl .wk{font-family:var(--mono);font-size:.78rem;color:var(--accent);padding-top:2px}
+.tl .body h4{font-size:1.02rem;margin-bottom:6px}
+.tl .body p{font-size:.9rem;color:var(--ink-2);font-weight:300;max-width:78ch}
+@media(max-width:620px){.tl{grid-template-columns:1fr;gap:6px}}
+
+/* gate */
+.gate{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+@media(max-width:880px){.gate{grid-template-columns:1fr}}
+.gcol{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
+.gcol.scale{border-color:rgba(94,240,168,.4)} .gcol.iterate{border-color:rgba(240,196,120,.4)} .gcol.fold{border-color:rgba(255,138,138,.35)}
+.gcol .gh{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;font-weight:500}
+.gcol.scale .gh{color:var(--good)} .gcol.iterate .gh{color:var(--warm)} .gcol.fold .gh{color:var(--bad)}
+.gcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.gcol li{font-size:.88rem;color:var(--ink-2);font-weight:300;padding-left:18px;position:relative}
+.gcol li::before{position:absolute;left:0;top:0;font-family:var(--mono);font-size:.8rem}
+.gcol.scale li::before{content:"▲";color:var(--good)} .gcol.iterate li::before{content:"◆";color:var(--warm)} .gcol.fold li::before{content:"▼";color:var(--bad)}
+.gcol li b{color:var(--ink);font-weight:600}
+
+/* callout */
+.callout{margin-top:22px;border-left:3px solid var(--warm);background:rgba(240,196,120,.05);border-radius:0 12px 12px 0;padding:16px 20px}
+.callout .h{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warm);margin-bottom:8px}
+.callout p{color:var(--ink-2);font-weight:300;font-size:.94rem;max-width:84ch}
+.callout p b{color:var(--ink);font-weight:600}
+
+/* two-col list */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.listcard h4{font-size:1.02rem;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.listcard ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.listcard li{font-size:.9rem;color:var(--ink-2);font-weight:300;padding-left:18px;position:relative}
+.listcard li b{color:var(--ink);font-weight:600}
+.listcard.do li::before{content:"+";position:absolute;left:0;color:var(--good);font-family:var(--mono)}
+.listcard.dont li::before{content:"\00d7";position:absolute;left:0;color:var(--bad);font-family:var(--mono)}
+
+/* footer */
+.refs{border-top:1px solid var(--line);padding-top:30px;margin-top:10px;display:flex;gap:10px 12px;flex-wrap:wrap}
+.refs span{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px}
+footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:relative;z-index:1}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.foot-in .t{color:var(--ink-3);font-size:.78rem;font-family:var(--mono);letter-spacing:.03em;max-width:60ch}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{scroll-behavior:auto!important}}
+@media(max-width:620px){section{padding:56px 0}h2.title{font-size:clamp(1.5rem,7vw,2rem)}}
+</style>
+</head>
+<body id="top">
+<div class="bg-glow"></div>
+<div class="bg-vignette"></div>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top"><span class="dot"></span><span class="wm">Temporial · GTM</span></a>
+    <div class="nav-links">
+      <a href="#moat">Moat</a>
+      <a href="#portfolio">Beachheads</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#plan">Test plan</a>
+      <a href="#gate">Decision gate</a>
+      <a href="#sg">Singapore</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">Beachhead strategy · v1 test plan</span>
+    <h1 class="reveal">Sell the rig nobody else can do — <span class="grad">to people already paying for it</span>.</h1>
+    <p class="lead reveal">Everyone can auto-rig a biped. Our edge is everything that <i>isn't</i> one — quadrupeds, birds,
+      fish, insects, props — plus a good-enough motion loop in minutes. This is the plan for which beachheads to
+      test, what to measure, and the exact signals that say <b>double down</b> or <b>fold</b>.</p>
+    <div class="pills reveal">
+      <span class="pill"><b>3</b> beachheads tested in parallel</span>
+      <span class="pill"><b>8&ndash;12 wk</b> to a decision</span>
+      <span class="pill"><b>1</b> north-star: non-human rig success rate</span>
+    </div>
+  </div>
+</header>
+
+<!-- MOAT -->
+<section id="moat">
+  <div class="wrap">
+    <span class="eyebrow reveal">01 · The wedge</span>
+    <div class="sec-head reveal"><h2 class="title">The moat is non-human topology, not polish</h2></div>
+    <p class="lead reveal">We win where rigging is hard and cinematic quality doesn't matter: buyers who value
+      <b>speed, volume, and emotion</b> over film-grade fidelity. That rules out the whole humanoid-rig field and
+      points us straight at the densest pool of unmet 3D demand.</p>
+
+    <div class="moat">
+      <div class="card reveal">
+        <h3>Why incumbents leave this open</h3>
+        <div class="vs-row"><div class="who">Mixamo</div><div class="gap">Humanoid-only. <b>Zero</b> coverage of animals, birds, or objects.</div></div>
+        <div class="vs-row"><div class="who">Meshy / Tripo</div><div class="gap">Generation-first; their auto-rig <b>assumes a biped skeleton</b> and breaks on non-human topology.</div></div>
+        <div class="vs-row"><div class="who">Anything World</div><div class="gap">The one real animal competitor — but <b>library-driven</b>. It maps to pre-built creatures, not your arbitrary mesh.</div></div>
+        <div class="vs-row"><div class="who">CSM / Kaedim / Zakeke</div><div class="gap">Funded gold-rush on <i>generation</i> and static commerce. Not in the rigging-the-weird-mesh lane.</div></div>
+      </div>
+      <div class="card reveal">
+        <h3>So our defensible claim is narrow and sharp</h3>
+        <p class="muted" style="font-weight:300;margin-bottom:14px">&ldquo;Send us <b style="color:var(--ink)">any</b> non-human mesh — a wolf, a crow, a teapot — and get back a rigged, animated, good-enough asset in minutes, not a week of weight-painting.&rdquo;</p>
+        <div class="chips">
+          <span class="chip">arbitrary topology, not a library</span>
+          <span class="chip">good-enough &gt; cinematic</span>
+          <span class="chip">speed / volume / emotion buyers</span>
+          <span class="chip">global · digital-native · already paying</span>
+        </div>
+        <div class="callout" style="margin-top:18px">
+          <div class="h">The one thing to keep proving</div>
+          <p>Everything below rests on one fact: that we can rig <b>topologically diverse</b> meshes at an
+            accept-quality bar. If that breaks, no channel saves us — see <a class="inline" href="#metrics">§04</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO OVERVIEW -->
+<section id="portfolio">
+  <div class="wrap">
+    <span class="eyebrow reveal">02 · The portfolio</span>
+    <div class="sec-head reveal"><h2 class="title">Three beachheads, one bet, a couple of held options</h2></div>
+    <p class="lead reveal">Run three in parallel because they share the same engine and creator channels. By the
+      end of the test window, concentrate on <b>one</b> and keep at most one running alongside it.</p>
+
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead><tr><th>Beachhead</th><th>Who pays</th><th>Why it fits the moat</th><th>Stance</th></tr></thead>
+        <tbody>
+          <tr><td><b>Non-human avatars</b><br><span class="dim" style="font-size:.8rem">VRChat · VTuber · furry</span></td>
+            <td>Commission avatar artists (then end-creators)</td>
+            <td>Densest pool of non-human-3D demand; jank-tolerant; artists booked out for months</td>
+            <td><span class="badge primary">Primary</span></td></tr>
+          <tr><td><b>Indie game devs &amp; jammers</b></td>
+            <td>Solo / small studios; game-jam teams</td>
+            <td>Need creatures &amp; props Mixamo can't rig; love free tooling</td>
+            <td><span class="badge parallel">Parallel</span></td></tr>
+          <tr><td><b>Tabletop VTT tokens &amp; minis</b></td>
+            <td>Token/mini creators (Patreon); Foundry/Roll20 GMs</td>
+            <td>~100% non-human; animation = a 4-sec idle loop; proven paid market</td>
+            <td><span class="badge parallel">Parallel</span></td></tr>
+          <tr><td><b>Animated pet &ldquo;digital twin&rdquo;</b></td>
+            <td>Consumers (pet owners)</td>
+            <td>Literal pet angle; emotion-driven; differentiate from static-print incumbents</td>
+            <td><span class="badge v2">v2 · consumer breakout</span></td></tr>
+          <tr><td><b>AR-filter creators</b><br><span class="dim" style="font-size:.8rem">Effect House · Snap Lens</span></td>
+            <td>Filter / lens creators</td>
+            <td>Articulated props &amp; creatures, reuse same creator channels</td>
+            <td><span class="badge v2">v2 · secondary</span></td></tr>
+          <tr><td><b>Static objects / ecommerce 3D</b></td>
+            <td>Shopify stores, marketplaces</td>
+            <td>Turntable + AR placement is <i>static</i> — doesn't use the rigging moat</td>
+            <td><span class="badge trap">Trap · avoid v1</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout reveal">
+      <div class="h">On objects &amp; ecommerce — mostly a trap</div>
+      <p>Store 3D is static (turntable + AR placement) and the generation side is a funded gold rush (CSM, Kaedim,
+        Meshy, Zakeke). The <b>only</b> defensible slice is objects that <i>move</i> — furniture folding, gadgets
+        opening, &ldquo;watch-it-work&rdquo; demos — via a Shopify app or configurator partnerships. But that skews
+        B2B and slow, so it's a <b>v2 expansion</b>. The better &ldquo;objects&rdquo; play is to aim the same
+        articulation at <b>game / AR / tabletop props</b> and reuse the creator channels we're already building.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEACHHEAD 1 -->
+<section id="bh1" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">03 · Beachhead deep-dives</span>
+    <div class="sec-head reveal"><h2 class="title">What to ship, measure, and watch — per beachhead</h2></div>
+
+    <!-- B1 -->
+    <div class="bh lead-bh reveal">
+      <div class="bh-head"><span class="bn">B1</span><h3>Non-human avatars — VRChat / VTuber / furry</h3><span class="badge primary">Primary</span></div>
+      <p class="who"><b>Sell to commission artists first.</b> They're booked out for months and the slowest, most
+        unloved part of a non-human commission is rigging and weight-painting. Offer to take that off their plate and
+        you're selling a painkiller, not a vitamin. End-creators are the second wave.</p>
+      <div class="bh-grid">
+        <div class="bblock">
+          <div class="h">Where to find them</div>
+          <div class="chips">
+            <span class="chip">BOOTH</span><span class="chip">Gumroad</span><span class="chip">Jinxxy</span>
+            <span class="chip">VGen</span><span class="chip">FurAffinity</span><span class="chip">species / avatar Discords</span>
+            <span class="chip">VRChat creator X/Twitter</span>
+          </div>
+        </div>
+        <div class="bblock">
+          <div class="h">The test offer</div>
+          <ul>
+            <li>Rig-as-a-service: <b>&ldquo;send your model, get a VRC-ready rigged avatar (or clean base rig) back in hours.&rdquo;</b></li>
+            <li>10&ndash;20 design-partner artists; route <b>real client work</b> through it.</li>
+          </ul>
+        </div>
+        <div class="bblock">
+          <div class="h">Primary metrics</div>
+          <ul>
+            <li><b>Rig acceptance rate</b> — output usable with ≤ minor cleanup.</li>
+            <li><b>WTP per rig</b> — actual paid, vs current commission rates.</li>
+            <li><b>30-day repeat rate</b> — artists coming back with new jobs.</li>
+          </ul>
+        </div>
+        <div class="bblock">
+          <div class="h">Targets to clear</div>
+          <ul>
+            <li>≥ <b>50%</b> rig acceptance on first pass.</li>
+            <li>≥ <b>20%</b> of partners route a second paid job in 30 days.</li>
+            <li>≥ <b>1</b> unprompted referral inside a community.</li>
+          </ul>
+        </div>
+        <div class="bblock dd">
+          <div class="h">Signals to double down</div>
+          <ul>
+            <li>Artists quietly using it for <b>paid client work</b> (not just the free demo).</li>
+            <li>Organic mentions in species/avatar Discords; inbound from one posted demo.</li>
+            <li>People asking for <b>more species / formats</b> — pull, not push.</li>
+          </ul>
+        </div>
+        <div class="bblock fold">
+          <div class="h">Signals to fold</div>
+          <ul>
+            <li>They love the demo but <b>won't send paid work</b>.</li>
+            <li>Output needs a <b>full re-rig</b> every time.</li>
+            <li>Topology diversity (wings, tails, digitigrade legs) <b>breaks</b> it repeatedly.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- B2 -->
+    <div class="bh reveal">
+      <div class="bh-head"><span class="bn">B2</span><h3>Indie game devs &amp; jammers</h3><span class="badge parallel">Parallel</span></div>
+      <p class="who"><b>Win with free tooling and jam presence.</b> Solo and small teams constantly need creatures and
+        props Mixamo can't touch, and jammers are on 48&ndash;72h clocks where &ldquo;rig + idle loop in two minutes&rdquo;
+        is the difference between shipping and not. Land-grab with a free Unity/Godot plugin; monetize a pro/commercial tier later.</p>
+      <div class="bh-grid">
+        <div class="bblock">
+          <div class="h">Where to find them</div>
+          <div class="chips">
+            <span class="chip">Game Dev Network Discord</span><span class="chip">r/gamedev</span>
+            <span class="chip">itch.io</span><span class="chip">Ludum Dare</span><span class="chip">GMTK Jam</span>
+          </div>
+        </div>
+        <div class="bblock">
+          <div class="h">The test offer</div>
+          <ul>
+            <li>Free <b>Unity / Godot plugin</b>: drop in a creature mesh → rig + idle/walk loop.</li>
+            <li>Sponsor or seed <b>one jam</b>; be present in the Discord during it.</li>
+          </ul>
+        </div>
+        <div class="bblock">
+          <div class="h">Primary metrics</div>
+          <ul>
+            <li><b>Install → activation</b> (first successful non-human rig).</li>
+            <li><b>Return use</b> across ≥ 2 sessions.</li>
+            <li><b>Shipped games</b> crediting the plugin.</li>
+          </ul>
+        </div>
+        <div class="bblock">
+          <div class="h">Targets to clear</div>
+          <ul>
+            <li><b>200</b> installs off one jam; ≥ <b>30%</b> activation.</li>
+            <li>≥ <b>15%</b> return after the jam ends.</li>
+            <li>≥ <b>5</b> shipped jam games using it.</li>
+          </ul>
+        </div>
+        <div class="bblock dd">
+          <div class="h">Signals to double down</div>
+          <ul>
+            <li>Plugin <b>spreads organically</b> between devs.</li>
+            <li>Real <b>feature requests</b> — a sign of genuine use.</li>
+            <li>Games crediting it; Discord pull toward a paid tier.</li>
+          </ul>
+        </div>
+        <div class="bblock fold">
+          <div class="h">Signals to fold</div>
+          <ul>
+            <li>Installs but <b>no activation</b>.</li>
+            <li>Used only during the free jam, <b>never again</b>.</li>
+            <li>Devs prefer to <b>hand-rig</b> — control beats speed for them.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- B3 -->
+    <div class="bh reveal">
+      <div class="bh-head"><span class="bn">B3</span><h3>Tabletop VTT tokens &amp; minis</h3><span class="badge parallel">Parallel</span></div>
+      <p class="who"><b>The easiest quality bar we'll face.</b> Tokens are ~100% non-human and the animation need is a
+        single 4-second idle loop. There's a <b>proven Patreon market</b> (Beneos, Happy Tokenz). Sell to creators who
+        resell — or run our own Patreon — built on batch throughput.</p>
+      <div class="bh-grid">
+        <div class="bblock">
+          <div class="h">Where to find them</div>
+          <div class="chips">
+            <span class="chip">Foundry VTT Discord</span><span class="chip">Roll20 communities</span>
+            <span class="chip">r/FoundryVTT</span><span class="chip">Cults3D</span><span class="chip">token Patreons</span>
+          </div>
+        </div>
+        <div class="bblock">
+          <div class="h">The test offer</div>
+          <ul>
+            <li>Batch pipeline: <b>static token → animated idle loop</b> at volume.</li>
+            <li>Pilot with 3&ndash;5 existing token creators on a rev-share or flat fee.</li>
+          </ul>
+        </div>
+        <div class="bblock">
+          <div class="h">Primary metrics</div>
+          <ul>
+            <li><b>Cost / time per animated token</b> vs hand-made.</li>
+            <li><b>Throughput</b> at the quality bar (tokens/day).</li>
+            <li>Creator adoption &amp; <b>end-GM download</b> pull.</li>
+          </ul>
+        </div>
+        <div class="bblock">
+          <div class="h">Targets to clear</div>
+          <ul>
+            <li>≥ <b>10×</b> faster than hand-made at acceptable quality.</li>
+            <li>≥ <b>2</b> creators move a real pack through the pipeline.</li>
+            <li>Early <b>Patreon MRR</b> or a paid pack.</li>
+          </ul>
+        </div>
+        <div class="bblock dd">
+          <div class="h">Signals to double down</div>
+          <ul>
+            <li>A creator <b>switches their pipeline</b> to us.</li>
+            <li>GMs request more sets; downloads climb.</li>
+            <li>Patreon <b>MRR compounds</b> month over month.</li>
+          </ul>
+        </div>
+        <div class="bblock fold">
+          <div class="h">Signals to fold</div>
+          <ul>
+            <li>Quality bar <b>fails at small scale</b> (tokens are tiny but loops still read).</li>
+            <li>Market too <b>small or too cheap</b> to monetize.</li>
+            <li>Creators <b>won't share margin</b> and won't pay a fee.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- v2 held options -->
+    <div class="grid-3 reveal">
+      <div class="card">
+        <div style="margin-bottom:10px"><span class="badge v2">v2 · breakout</span></div>
+        <h4 style="font-size:1.08rem;margin-bottom:8px">Animated pet digital twin</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">The literal pet angle — an <b style="color:var(--ink)">animated</b> twin vs static-print incumbents (PrintPal). Highest emotion, broadest TAM, but consumer GTM is its own beast. Hold as the v2 breakout once the engine and channels are proven.</p>
+      </div>
+      <div class="card">
+        <div style="margin-bottom:10px"><span class="badge v2">v2 · secondary</span></div>
+        <h4 style="font-size:1.08rem;margin-bottom:8px">AR-filter creators</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">TikTok Effect House &amp; Snap Lens creators need articulated props and creatures. Reuses the same creator-channel muscle. Cheap to test later as an offshoot of B2.</p>
+      </div>
+      <div class="card">
+        <div style="margin-bottom:10px"><span class="badge v2">v2 · secondary</span></div>
+        <h4 style="font-size:1.08rem;margin-bottom:8px">Asset-marketplace sellers</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Sellers packaging animated non-human asset packs. A supply-side play that piggybacks on the same output — low priority until a primary beachhead is winning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section id="metrics">
+  <div class="wrap">
+    <span class="eyebrow reveal">04 · Measurement framework</span>
+    <div class="sec-head reveal"><h2 class="title">One north-star, one funnel, every channel</h2></div>
+
+    <div class="north reveal">
+      <div class="tag">North-star · product truth</div>
+      <h3>Non-human Rig Success Rate</h3>
+      <p>The share of <b>arbitrary, topologically diverse</b> non-human meshes that produce an accept-quality rig +
+        loop with ≤ minor cleanup. This is the moat, quantified. Track it <b>per topology class</b> (quadruped, bird,
+        fish, insect, prop) so you see exactly where coverage is thin. If this number is low, channel metrics are
+        noise — fix the engine before scaling spend.</p>
+    </div>
+
+    <p class="lead reveal" style="margin-top:30px">Under the north-star, every channel runs the same funnel. Watch
+      for the drop-off stage — that's what to fix or fold on.</p>
+    <div class="funnel reveal">
+      <div class="fstep"><div class="n">01 · REACH</div><div class="t">Community touch</div><div class="d">Demos seen, Discord/post impressions, replies.</div></div>
+      <div class="fstep"><div class="n">02 · TRIAL</div><div class="t">First upload</div><div class="d">They actually run a mesh through it.</div></div>
+      <div class="fstep"><div class="n">03 · ACTIVATION</div><div class="t">First good asset</div><div class="d">First accept-quality non-human rig out.</div></div>
+      <div class="fstep"><div class="n">04 · REPEAT</div><div class="t">Second use</div><div class="d">Comes back with new, unprompted work.</div></div>
+      <div class="fstep"><div class="n">05 · PAID</div><div class="t">Money changes hands</div><div class="d">Real payment — not &ldquo;I'd pay.&rdquo;</div></div>
+      <div class="fstep"><div class="n">06 · REFERRAL</div><div class="t">Word of mouth</div><div class="d">Tells the community unprompted.</div></div>
+    </div>
+
+    <div class="grid-2 reveal" style="margin-top:26px">
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:12px">Demand-intensity proxies (look before you build)</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> Commission <b style="color:var(--ink)">backlog length</b> — how booked-out are non-human artists?</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> Frequency of <b style="color:var(--ink)">&ldquo;can anyone rig my [animal]?&rdquo;</b> asks in communities.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> <b style="color:var(--ink)">Price of comparable commissions</b> — anchors our pricing.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> Existing <b style="color:var(--ink)">paid Patreons</b> in the niche (proves money flows).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:12px">The metrics that actually decide it</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">Activation rate</b> — the single best leading indicator of value.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">Paid conversion &amp; repeat</b> — revealed willingness to pay.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">Referral coefficient</b> — these communities are small &amp; high-trust: virality or death.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">CAC via community</b> — should be ≈ free; if you're buying users, the wedge is wrong.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEST PLAN -->
+<section id="plan">
+  <div class="wrap">
+    <span class="eyebrow reveal">05 · The test</span>
+    <div class="sec-head reveal"><h2 class="title">An 8-week run to a real decision</h2></div>
+    <p class="lead reveal">Tight, instrumented, and biased toward putting <b>real paid work</b> through the engine — not
+      demos. Pricing is part of the experiment, not an afterthought.</p>
+
+    <div class="timeline reveal">
+      <div class="tl"><div class="wk">Week 0</div><div class="body"><h4>Instrument &amp; recruit</h4><p>Define the accept-quality bar with examples. Stand up event tracking for the funnel. Line up 10&ndash;20 design partners per beachhead from the channels in §03.</p></div></div>
+      <div class="tl"><div class="wk">Weeks 1&ndash;2</div><div class="body"><h4>Ship the minimal offer</h4><p>B1: rig-as-a-service intake. B2: plugin alpha into one jam. B3: batch pipeline for 3&ndash;5 token creators. Each should let a partner get one real asset out.</p></div></div>
+      <div class="tl"><div class="wk">Weeks 3&ndash;6</div><div class="body"><h4>Run real work through it</h4><p>Push paid client jobs (B1), jam projects (B2), and token packs (B3). Capture rig-success-rate by topology, activation, repeat, and actual payment. Test 2&ndash;3 price points.</p></div></div>
+      <div class="tl"><div class="wk">Weeks 7&ndash;8</div><div class="body"><h4>Decision gate</h4><p>Score each beachhead against the gate below. Concentrate on one; keep at most one parallel; kill the rest cleanly.</p></div></div>
+    </div>
+
+    <div class="split reveal" style="margin-top:30px">
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:12px">Pricing experiments to run</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> <b style="color:var(--ink)">Per-rig / per-asset</b> (B1, B3) — anchor against existing commission prices.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> <b style="color:var(--ink)">Free tool + paid commercial/pro tier</b> (B2) — land free, monetize the studio.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> <b style="color:var(--ink)">Creator rev-share or our own Patreon</b> (B3).</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> Test the <b style="color:var(--ink)">painkiller framing</b> (&ldquo;skip the weight-painting&rdquo;) vs volume framing.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:12px">Guardrails for a clean test</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Measure <b style="color:var(--ink)">paid behavior</b>, not stated intent.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Don't over-serve design partners by hand — it hides the real activation rate.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Keep CAC honest: community pull should be near-free, not bought.</li>
+          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Give the engine <b style="color:var(--ink)">2 iterations</b> on a quality gap before folding a beachhead.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DECISION GATE -->
+<section id="gate">
+  <div class="wrap">
+    <span class="eyebrow reveal">06 · The decision</span>
+    <div class="sec-head reveal"><h2 class="title">Scale, iterate, or fold</h2></div>
+    <p class="lead reveal">At week 8, every beachhead lands in exactly one column. Be disciplined: a beloved demo that
+      won't convert is a <i>fold</i>, not an iterate.</p>
+
+    <div class="gate reveal">
+      <div class="gcol scale">
+        <div class="gh">Double down if…</div>
+        <ul>
+          <li><b>Rig success ≥ bar</b> across the topology classes this audience uses.</li>
+          <li>Multiple <b>paid repeats</b> — same users coming back with money.</li>
+          <li><b>Organic referral</b> present inside the community.</li>
+          <li><b>CAC ≈ free</b> — growth is pull, not push.</li>
+        </ul>
+      </div>
+      <div class="gcol iterate">
+        <div class="gh">Iterate if…</div>
+        <ul>
+          <li>Strong <b>love &amp; activation</b> but weak monetization → fix pricing/packaging.</li>
+          <li>Strong <b>demand</b> but quality gaps → one more engine iteration.</li>
+          <li>It's working but the <b>wrong buyer</b> (end-creator not artist, GM not creator).</li>
+        </ul>
+      </div>
+      <div class="gcol fold">
+        <div class="gh">Fold if…</div>
+        <ul>
+          <li><b>No activation</b> — they won't get a first asset out.</li>
+          <li><b>No willingness to pay</b> after price tests.</li>
+          <li>Quality <b>can't clear the bar</b> after 2 iterations.</li>
+          <li>Market is real but <b>too small or too cheap</b> to matter.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="h">Default expectation</div>
+      <p>The base case is that <b>B1 (non-human avatars)</b> is the wedge — densest demand, jank-tolerant, clearest
+        painkiller. Run <b>B3 (tokens)</b> in parallel as the easiest quality win and earliest revenue, and treat
+        <b>B2 (game devs)</b> as the top-of-funnel land-grab. Hold the <b>animated pet twin</b> as the consumer breakout
+        for when the engine and channels are proven.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SINGAPORE -->
+<section id="sg">
+  <div class="wrap">
+    <span class="eyebrow reveal">07 · Geography &amp; focus</span>
+    <div class="sec-head reveal"><h2 class="title">Singapore is no disadvantage</h2></div>
+    <p class="lead reveal">These communities are global and digital-native, payment rails work from SG, and a no-name
+      student team starts with a <b>cost edge</b> and a <b>timezone advantage</b> over the biggest avatar market on
+      earth.</p>
+
+    <div class="split reveal">
+      <div class="listcard do card">
+        <h4><span class="badge good">Lean in</span></h4>
+        <ul>
+          <li><b>Japan timezone overlap</b> — the largest avatar/VTuber market, in your working hours.</li>
+          <li><b>Cost edge</b> — a small team can undercut booked-out Western commission artists on the unloved rigging step.</li>
+          <li><b>Local design partners</b> — IMDA PIXEL, Gamescom Asia, and NUS / NTU / SMU game-dev clubs.</li>
+          <li><b>Global rails</b> — Gumroad, BOOTH, Patreon, itch.io all pay out to SG.</li>
+        </ul>
+      </div>
+      <div class="listcard dont card">
+        <h4><span class="badge trap">Avoid</span></h4>
+        <ul>
+          <li><b>Film &amp; AAA</b> — cinematic polish is exactly what we don't have.</li>
+          <li><b>Scientific / medical viz</b> — accuracy bar kills &ldquo;good-enough.&rdquo;</li>
+          <li><b>Enterprise sales</b> — slow cycles a student team can't fund.</li>
+          <li><b>Static ecommerce 3D</b> — doesn't touch the rigging moat; crowded &amp; funded.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <div class="t">Temporial · Beachhead GTM &amp; test plan — non-human rigging as the wedge. Internal strategy, v1.</div>
+    <div class="refs" style="border:0;padding:0;margin:0">
+      <span>moat: non-human topology</span><span>3 beachheads</span><span>north-star: rig success rate</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
