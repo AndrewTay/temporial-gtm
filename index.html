@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Temporial — Beachhead GTM &amp; Test Plan</title>
-<meta name="description" content="Go-to-market strategy for Temporial's non-human rigging wedge: which beachheads to test, what to measure, the signals to double down on, and the signals to fold." />
+<title>Temporial — The Motion Layer of the 3D Economy</title>
+<meta name="description" content="A first-principles strategy: when animating any 3D model becomes easy, motion becomes the unlock layer of the entire 3D economy — games, AR/VR, commerce, Physical AI, and the new creator segments it spawns. Built top-down, executed bottom-up." />
 <link rel="icon" type="image/svg+xml" href="media/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16.png" />
@@ -45,16 +45,18 @@ nav.scrolled{background:rgba(6,8,13,.62);backdrop-filter:var(--glass-blur);-webk
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
 .brand img{width:26px;height:26px;display:block;filter:drop-shadow(0 0 10px rgba(124,196,255,.45))}
 .brand .wm{font-weight:600;font-size:1.02rem;letter-spacing:.04em}
-.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links{display:flex;gap:20px;align-items:center}
 .nav-links a{color:var(--ink-2);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .25s}
 .nav-links a:hover{color:var(--ink)}
-@media(max-width:980px){.nav-links{display:none}}
+@media(max-width:1080px){.nav-links{display:none}}
 
 /* layout */
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 section{padding:clamp(52px,7vh,96px) 0;position:relative;z-index:1}
 .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);opacity:.7}
+.eyebrow.warm{color:var(--warm)} .eyebrow.warm::before{background:var(--warm)}
+.eyebrow.good{color:var(--good)} .eyebrow.good::before{background:var(--good)}
 h1,h2,h3,h4{font-weight:600;letter-spacing:-.025em;line-height:1.12}
 h2.title{font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:26ch;margin-bottom:16px}
 .lead{font-size:clamp(1rem,1.4vw,1.18rem);color:var(--ink-2);max-width:72ch;font-weight:300}
@@ -63,15 +65,15 @@ h2.title{font-size:clamp(1.7rem,3.4vw,2.5rem);max-width:26ch;margin-bottom:16px}
 a.inline{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(124,196,255,.3)}
 a.inline:hover{color:#fff}
 .sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
-.sec-head .num{font-family:var(--mono);color:var(--accent);font-size:.8rem}
+.part-tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);border-radius:999px;padding:6px 14px;display:inline-block;margin-bottom:22px}
 .glass{background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur)}
 
 /* hero */
-.hero{min-height:84svh;display:flex;align-items:center;text-align:center;padding:128px 0 56px}
-.hero-inner{max-width:62rem;margin:0 auto;display:flex;flex-direction:column;align-items:center}
-.hero h1{font-size:clamp(2.1rem,4.8vw,3.7rem);margin:8px 0 22px;max-width:18ch}
-.hero .lead{margin:0 auto 30px;max-width:64ch;text-align:center}
-.pills{margin-top:10px;display:flex;gap:10px 12px;flex-wrap:wrap;justify-content:center}
+.hero{min-height:90svh;display:flex;align-items:center;text-align:center;padding:128px 0 56px}
+.hero-inner{max-width:64rem;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);margin:8px 0 24px;max-width:16ch;line-height:1.04}
+.hero .lead{margin:0 auto 30px;max-width:66ch;text-align:center}
+.pills{margin-top:12px;display:flex;gap:10px 12px;flex-wrap:wrap;justify-content:center}
 .pill{font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--ink-2);border:1px solid var(--line);background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-radius:999px;padding:7px 14px}
 .pill b{color:var(--accent);font-weight:600}
 
@@ -81,15 +83,12 @@ a.inline:hover{color:#fff}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
 @media(max-width:880px){.grid-2,.grid-3{grid-template-columns:1fr}}
 
-/* moat block */
-.moat{margin-top:26px;display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
-@media(max-width:880px){.moat{grid-template-columns:1fr}}
-.moat .card h3{font-size:1.18rem;margin-bottom:10px}
-.vs-row{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
-.vs-row:first-of-type{border-top:0}
-.vs-row .who{font-weight:600;min-width:128px;font-size:.94rem}
-.vs-row .gap{font-size:.9rem;color:var(--ink-2);font-weight:300}
-.vs-row .gap b{color:var(--ink);font-weight:600}
+/* big stat row */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}}
+.stat-c{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--panel)}
+.stat-c .v{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:600;letter-spacing:-.03em}
+.stat-c .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink-3);margin-top:4px;text-transform:uppercase}
 
 /* badges */
 .badge{font-family:var(--mono);font-size:.64rem;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:4px 10px;border:1px solid;display:inline-block;white-space:nowrap}
@@ -99,13 +98,21 @@ a.inline:hover{color:#fff}
 .badge.trap{color:var(--bad);border-color:rgba(255,138,138,.4);background:rgba(255,138,138,.06)}
 .badge.good{color:var(--good);border-color:rgba(94,240,168,.45);background:rgba(94,240,168,.06)}
 
+/* segment / pillar cards */
+.scard{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s}
+.scard:hover{transform:translateY(-3px);border-color:var(--line-2)}
+.scard .ic{font-size:1.4rem;margin-bottom:10px}
+.scard h4{font-size:1.06rem;margin-bottom:7px}
+.scard p{font-size:.89rem;color:var(--ink-2);font-weight:300}
+.scard .tagline{font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;color:var(--accent);text-transform:uppercase;margin-top:10px}
+
 /* beachhead cards */
 .bh{border:1px solid var(--line);border-radius:18px;padding:clamp(18px,2.2vw,26px);background:var(--panel);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);margin-top:18px}
 .bh.lead-bh{border-color:rgba(124,196,255,.3)}
 .bh-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 .bh-head .bn{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);letter-spacing:.08em}
 .bh-head h3{font-size:1.3rem}
-.bh .who{color:var(--ink-2);font-weight:300;font-size:.96rem;max-width:80ch;margin:6px 0 16px}
+.bh .who{color:var(--ink-2);font-weight:300;font-size:.96rem;max-width:84ch;margin:6px 0 16px}
 .bh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 @media(max-width:760px){.bh-grid{grid-template-columns:1fr}}
 .bblock{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:rgba(10,13,20,.4)}
@@ -131,8 +138,8 @@ td b{color:var(--ink)} td .mono{font-family:var(--mono);font-size:.82rem;color:v
 /* metric / north star */
 .north{margin-top:24px;border:1px solid rgba(124,196,255,.3);border-radius:18px;padding:clamp(20px,2.6vw,30px);background:linear-gradient(180deg,rgba(124,196,255,.06),rgba(124,196,255,.01))}
 .north .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.north h3{font-size:clamp(1.3rem,2.4vw,1.7rem);max-width:24ch;margin-bottom:12px}
-.north p{color:var(--ink-2);font-weight:300;max-width:78ch}
+.north h3{font-size:clamp(1.3rem,2.4vw,1.7rem);max-width:26ch;margin-bottom:12px}
+.north p{color:var(--ink-2);font-weight:300;max-width:80ch}
 
 /* funnel */
 .funnel{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
@@ -141,13 +148,20 @@ td b{color:var(--ink)} td .mono{font-family:var(--mono);font-size:.82rem;color:v
 .fstep .t{font-weight:600;font-size:.96rem;margin:4px 0 5px}
 .fstep .d{font-size:.82rem;color:var(--ink-2);font-weight:300}
 
+/* ladder rungs */
+.rung{display:grid;grid-template-columns:140px 1fr auto;gap:16px;align-items:center;padding:15px 18px;border:1px solid var(--line);border-radius:13px;margin-bottom:6px}
+.rung .lv{font-family:var(--mono);font-size:.8rem;font-weight:500}
+.rung .desc{font-size:.94rem;color:var(--ink-2);font-weight:300}
+.rung .desc b{color:var(--ink);font-weight:600}
+@media(max-width:680px){.rung{grid-template-columns:1fr;gap:6px}}
+
 /* timeline */
 .timeline{margin-top:24px;display:flex;flex-direction:column;gap:2px}
 .tl{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--line)}
 .tl:first-child{border-top:0}
 .tl .wk{font-family:var(--mono);font-size:.78rem;color:var(--accent);padding-top:2px}
 .tl .body h4{font-size:1.02rem;margin-bottom:6px}
-.tl .body p{font-size:.9rem;color:var(--ink-2);font-weight:300;max-width:78ch}
+.tl .body p{font-size:.9rem;color:var(--ink-2);font-weight:300;max-width:80ch}
 @media(max-width:620px){.tl{grid-template-columns:1fr;gap:6px}}
 
 /* gate */
@@ -165,8 +179,10 @@ td b{color:var(--ink)} td .mono{font-family:var(--mono);font-size:.82rem;color:v
 
 /* callout */
 .callout{margin-top:22px;border-left:3px solid var(--warm);background:rgba(240,196,120,.05);border-radius:0 12px 12px 0;padding:16px 20px}
+.callout.accent{border-left-color:var(--accent);background:rgba(124,196,255,.05)}
 .callout .h{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warm);margin-bottom:8px}
-.callout p{color:var(--ink-2);font-weight:300;font-size:.94rem;max-width:84ch}
+.callout.accent .h{color:var(--accent)}
+.callout p{color:var(--ink-2);font-weight:300;font-size:.94rem;max-width:88ch}
 .callout p b{color:var(--ink);font-weight:600}
 
 /* two-col list */
@@ -179,12 +195,16 @@ td b{color:var(--ink)} td .mono{font-family:var(--mono);font-size:.82rem;color:v
 .listcard.do li::before{content:"+";position:absolute;left:0;color:var(--good);font-family:var(--mono)}
 .listcard.dont li::before{content:"\00d7";position:absolute;left:0;color:var(--bad);font-family:var(--mono)}
 
+/* divider */
+.part-divider{border-top:1px solid var(--line);margin-top:8px}
+
 /* footer */
 .refs{border-top:1px solid var(--line);padding-top:30px;margin-top:10px;display:flex;gap:10px 12px;flex-wrap:wrap}
-.refs span{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px}
+.refs span,.refs a{font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none}
+.refs a:hover{border-color:var(--accent);color:#fff}
 footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:relative;z-index:1}
 .foot-in{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
-.foot-in .t{color:var(--ink-3);font-size:.78rem;font-family:var(--mono);letter-spacing:.03em;max-width:60ch}
+.foot-in .t{color:var(--ink-3);font-size:.78rem;font-family:var(--mono);letter-spacing:.03em;max-width:64ch}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
@@ -199,18 +219,16 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
 <nav id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top"><img src="media/logo-mark.svg" alt="Temporial mark" /><span class="wm">Temporial · GTM</span></a>
+    <a class="brand" href="#top"><img src="media/logo-mark.svg" alt="Temporial mark" /><span class="wm">Temporial</span></a>
     <div class="nav-links">
-      <a href="#edge">The wedge</a>
-      <a href="#portfolio">Beachheads</a>
-      <a href="#econ">Economics</a>
-      <a href="#plan">Test plan</a>
-      <a href="#risks">Hard truths</a>
-      <a href="#model">Financials</a>
-      <a href="#tenm">$10M path</a>
-      <a href="#arc">The arc</a>
-      <a href="#plan100">First 100 days</a>
-      <a href="#sg">Singapore</a>
+      <a href="#shift">The shift</a>
+      <a href="#market">Market</a>
+      <a href="#segments">New segments</a>
+      <a href="#moat">Right to win</a>
+      <a href="#wedge">The wedge</a>
+      <a href="#ladder">The ladder</a>
+      <a href="#model">Model</a>
+      <a href="#plan100">100 days</a>
     </div>
   </div>
 </nav>
@@ -218,967 +236,358 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 <!-- HERO -->
 <header class="hero">
   <div class="wrap hero-inner">
-    <span class="eyebrow reveal">Beachhead strategy · v1 test plan</span>
-    <h1 class="reveal">Productize what's just become possible — <span class="grad">and ship it before it's perfect, to people already paying.</span></h1>
-    <p class="lead reveal">Auto-rigging and animation are only now becoming possible — hardest of all on non-human shapes
-      (quadrupeds, birds, props). We don't wait for perfect: we <b>productize what works today</b> and put it in front of
-      creators who value <b>good-enough now</b> over cinematic later — and are already paying for it. This is the plan for
-      which beachheads to test, what to measure, and the signals that say <b>double down</b> or <b>fold</b>.</p>
+    <span class="eyebrow reveal">First-principles strategy · top-down → bottom-up</span>
+    <h1 class="reveal">Make anything move. <span class="grad">Own the motion layer of the 3D economy.</span></h1>
+    <p class="lead reveal">Generation made static 3D cheap. The last hard, skill-gated step is <b>motion</b> — rigging
+      and animation. When that becomes a button, <b>every 3D surface unlocks at once</b>: games, AR/VR, commerce,
+      Physical AI, and a brand-new creator class. We productize that now, before it's perfect, and compound the one
+      asset no one else has — <b>4D motion data</b>.</p>
     <div class="pills reveal">
-      <span class="pill"><b>1</b> lead bet, sequenced — not 3 at once</span>
-      <span class="pill"><b>$1k MRR</b> in ~12 wk is the bar</span>
-      <span class="pill"><b>1</b> north-star: non-human rig success rate</span>
+      <span class="pill"><b>6</b> growth vectors, one motion layer</span>
+      <span class="pill"><b>$100B+</b> 3D economy it sits under</span>
+      <span class="pill"><b>Right to win:</b> the hardest layer + the data</span>
     </div>
   </div>
 </header>
 
-<!-- MOAT -->
-<section id="edge">
+<!-- =================== PART I — TOP-DOWN =================== -->
+<section id="shift" style="padding-bottom:30px">
   <div class="wrap">
-    <span class="eyebrow reveal">01 · The wedge</span>
-    <div class="sec-head reveal"><h2 class="title">Non-human topology is the beachhead, not the moat</h2></div>
-    <p class="lead reveal">It's our <b>way in</b> — an underserved, jank-tolerant, already-paying pocket of demand the
-      humanoid-rig field can't touch. We win here because buyers value <b>speed, volume, and emotion</b> over
-      film-grade fidelity. The honest version: it's <i>not</i> &ldquo;we rig animals, they don't&rdquo; — <b>Anything World
-      already rigs uploaded animals for $50/mo</b>. The wedge is the <b>avatar essentials it skips</b> (faces, clothing,
-      props — see right) plus owning the creator channels. It's still copyable, so the moat has to be <b>built</b>:
-      <b>workflow lock-in</b>, <b>community distribution</b>, or <b>coverage data</b> from the long tail of weird meshes.
-      If none of those is forming, we're a feature, not a company.</p>
+    <span class="part-tag reveal">Part I · Top-down — the model</span>
+    <span class="eyebrow reveal">01 · The shift</span>
+    <div class="sec-head reveal"><h2 class="title">Motion is the bottleneck the whole 3D economy is stuck behind</h2></div>
+    <p class="lead reveal">First principles: a 3D asset is worthless until it <i>moves</i> with intent. Generation solved the
+      cheap part (static meshes — Meshy, Tripo, Hunyuan, CSM). The expensive part — rigging and animation — is still
+      manual, slow, and locked behind specialist skill. <b>That bottleneck is the most valuable real estate in 3D</b>,
+      because it gates every downstream use. Collapse it and you don't win one app — you unlock the layer beneath all of
+      them.</p>
 
-    <div class="moat">
-      <div class="card reveal">
-        <h3>The competitive map, corrected</h3>
-        <div class="vs-row"><div class="who">Mixamo</div><div class="gap">Humanoid-only. <b>Zero</b> coverage of animals, birds, or objects.</div></div>
-        <div class="vs-row"><div class="who">Meshy / Tripo</div><div class="gap">Generation-first; their auto-rig <b>assumes a biped skeleton</b> and breaks on non-human topology.</div></div>
-        <div class="vs-row"><div class="who">Anything&nbsp;World</div><div class="gap"><b>The real threat — it already rigs your uploaded animals</b> ($50/mo). But it <b>decimates high-poly</b> and skips <b>facial blendshapes, layered clothing/submeshes, and props</b> — the exact avatar essentials. <span style="color:var(--good)">That gap is our wedge.</span></div></div>
-        <div class="vs-row"><div class="who">CSM / Kaedim / Zakeke</div><div class="gap">Funded gold-rush on <i>generation</i> and static commerce. Not in the rigging-the-weird-mesh lane.</div></div>
-      </div>
-      <div class="card reveal">
-        <h3>So our entry claim is the gap, not the species</h3>
-        <p class="muted" style="font-weight:300;margin-bottom:14px">&ldquo;Send us a creature mesh and get back a rig with the things the auto-riggers skip — a <b style="color:var(--ink)">face, dynamic clothing, props, and an idle loop</b> — VTuber/VRChat-ready, not decimated.&rdquo;</p>
-        <div class="chips">
-          <span class="chip">faces + clothing + props, not just bones</span>
-          <span class="chip">no high-poly decimation</span>
-          <span class="chip">built for avatars &amp; tokens, not generic AR</span>
-          <span class="chip">we own the creator channels</span>
-        </div>
-        <div class="callout" style="margin-top:18px">
-          <div class="h">The one thing to keep proving</div>
-          <p>Everything rests on one fact: that we clear the <b>avatar-essentials bar</b> (rig + face + clothing/props)
-            on diverse meshes where Anything World stops at bare bones. If we can't, we're not differentiated — see
-            <a class="inline" href="#risks">§07</a>.</p>
-        </div>
-      </div>
+    <div class="stats reveal">
+      <div class="stat-c"><div class="v grad">solved</div><div class="k">Static 3D generation</div></div>
+      <div class="stat-c"><div class="v" style="color:var(--warm)">the wall</div><div class="k">Rig + animate (motion)</div></div>
+      <div class="stat-c"><div class="v">↓ collapsing</div><div class="k">Cost &amp; skill to animate</div></div>
+      <div class="stat-c"><div class="v grad">→ new demand</div><div class="k">Everyone who couldn't, now can</div></div>
+    </div>
+
+    <div class="callout accent reveal">
+      <div class="h">The Jevons move</div>
+      <p>When the skill barrier on a content type collapses, the market doesn't redistribute — it grows <b>10&ndash;100&times;</b>.
+        Canva did it to design, CapCut to video, Roblox to game-making, Midjourney to images. 3D animation has the
+        <b>highest skill wall in all of content</b> and latent demand in every screen and headset. That makes it the
+        single richest democratization left — and the prize is the <b>new market that doesn't exist yet</b>, not a slice
+        of the pro one.</p>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO OVERVIEW -->
-<section id="portfolio">
+<!-- MARKET (top-down TAM) -->
+<section id="market" style="padding-top:30px">
   <div class="wrap">
-    <span class="eyebrow reveal">02 · The portfolio</span>
-    <div class="sec-head reveal"><h2 class="title">Sequenced, not parallel — a three-person team can't run three GTMs</h2></div>
-    <p class="lead reveal">They share the same engine, so run <b>discovery</b> across all three. But run only <b>one paid
-      push at a time</b>, ordered by speed-to-cash: <b>tokens first</b> (cheapest dollar, lowest quality bar, proves the
-      engine), then <b>avatars</b> (the prize, but it has positioning risk to resolve), with <b>game devs</b> as a
-      distribution funnel, not a revenue line.</p>
+    <span class="eyebrow reveal">02 · The market, top-down</span>
+    <div class="sec-head reveal"><h2 class="title">Six growth vectors, all converging on the same motion layer</h2></div>
+    <p class="lead reveal">We are not a vertical app. We're the <b>horizontal &ldquo;make it move&rdquo; layer</b> that every
+      one of these needs — so we ride all of them at once instead of betting on one. Sizes are directional, order-of-magnitude
+      framing, not precise TAM.</p>
 
     <div class="tbl-wrap reveal">
       <table>
-        <thead><tr><th>Beachhead</th><th>Who pays</th><th>Why it fits the wedge</th><th>Stance</th></tr></thead>
+        <thead><tr><th>Growth vector</th><th>Why it's exploding</th><th>Scale (directional)</th><th>What we sell into it</th></tr></thead>
         <tbody>
-          <tr><td><b>Tabletop VTT tokens &amp; minis</b></td>
-            <td>Token/mini creators (Patreon); Foundry/Roll20 GMs</td>
-            <td>~100% non-human; need = one 4-sec idle loop; proven paid market; lowest quality bar</td>
-            <td><span class="badge good">Run first · cash</span></td></tr>
-          <tr><td><b>Non-human avatars</b><br><span class="dim" style="font-size:.8rem">VRChat · VTuber (furry parked)</span></td>
-            <td>Commission artists <i>or</i> priced-out end-users (TBD — see §07)</td>
-            <td>Densest pool of non-human-3D demand; jank-tolerant; highest $/customer</td>
-            <td><span class="badge primary">Lead bet</span></td></tr>
-          <tr><td><b>Indie game devs &amp; jammers</b></td>
-            <td>Solo / small studios; game-jam teams</td>
-            <td>Need creatures &amp; props Mixamo can't rig; free tool = distribution, not revenue</td>
-            <td><span class="badge parallel">Funnel · later</span></td></tr>
-          <tr><td><b>Animated pet &ldquo;digital twin&rdquo;</b></td>
-            <td>Consumers (pet owners)</td>
-            <td>Literal pet angle; emotion-driven; differentiate from static-print incumbents</td>
-            <td><span class="badge v2">v2 · consumer breakout</span></td></tr>
-          <tr><td><b>AR-filter creators</b><br><span class="dim" style="font-size:.8rem">Effect House · Snap Lens</span></td>
-            <td>Filter / lens creators</td>
-            <td>Articulated props &amp; creatures, reuse same creator channels</td>
-            <td><span class="badge v2">v2 · secondary</span></td></tr>
-          <tr><td><b>Static objects / ecommerce 3D</b></td>
-            <td>Shopify stores, marketplaces</td>
-            <td>Turntable + AR placement is <i>static</i> — doesn't use our rigging edge</td>
-            <td><span class="badge trap">Trap · avoid v1</span></td></tr>
+          <tr><td><b>Indie &amp; UGC games</b></td><td>Roblox, Minecraft, Fortnite/UEFN, Unity, Godot — millions of creators, no animators</td><td>~$200B+ games; 10M+ creators</td><td>auto-rig + animate creatures, avatars, items</td></tr>
+          <tr><td><b>Physical AI</b></td><td>Robots &amp; world-models train on simulated motion; 4D data is scarce</td><td>fast-growing, high-ACV B2B</td><td>synthetic 4D motion datasets</td></tr>
+          <tr><td><b>AR / VR / spatial</b></td><td>Headsets &amp; mobile AR are content-starved; everything is 3D &amp; moving</td><td>tens of $B, growing</td><td>animated props, characters, effects</td></tr>
+          <tr><td><b>3D ecommerce / try-on</b></td><td>Every SKU wants a 3D asset; the frontier is assets that <i>move</i></td><td>$6T+ ecommerce; 3D a fast slice</td><td>living product demos &amp; virtual try-on</td></tr>
+          <tr><td><b>Avatars &amp; social</b></td><td>Hundreds of millions of avatars across Roblox, Snap, VRChat, VTubing</td><td>100M+ avatars</td><td>expressive non-human avatars at volume</td></tr>
+          <tr><td><b>Creator &amp; consumer</b></td><td>The &ldquo;Canva for animation&rdquo; class that can't exist until now</td><td>net-new — the breakout</td><td>self-serve &ldquo;animate anything&rdquo;</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div class="callout reveal">
-      <div class="h">On objects &amp; ecommerce — mostly a trap</div>
-      <p>Store 3D is static (turntable + AR placement) and the generation side is a funded gold rush (CSM, Kaedim,
-        Meshy, Zakeke). The <b>only</b> defensible slice is objects that <i>move</i> — furniture folding, gadgets
-        opening, &ldquo;watch-it-work&rdquo; demos — via a Shopify app or configurator partnerships. But that skews
-        B2B and slow, so it's a <b>v2 expansion</b>. The better &ldquo;objects&rdquo; play is to aim the same
-        articulation at <b>game / AR / tabletop props</b> and reuse the creator channels we're already building.</p>
-    </div>
+    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">The unit that compounds across all six: a proprietary (input → rigged-animated) pair. Every job in any vector feeds the same engine.</p>
   </div>
 </section>
 
-<!-- BEACHHEAD 1 -->
-<section id="bh1" style="padding-top:0">
+<!-- NEW SEGMENTS -->
+<section id="segments">
   <div class="wrap">
-    <span class="eyebrow reveal">03 · Beachhead deep-dives</span>
-    <div class="sec-head reveal"><h2 class="title">What to ship, measure, and watch — per beachhead</h2></div>
+    <span class="eyebrow reveal">03 · New segments to create</span>
+    <div class="sec-head reveal"><h2 class="title">What becomes possible when animating 3D is trivially easy</h2></div>
+    <p class="lead reveal">These aren't features — they're <b>markets that don't exist yet</b> because the motion barrier
+      kept them locked. Each is a product built on the same breakthrough.</p>
 
-    <!-- B1 -->
-    <div class="bh lead-bh reveal">
-      <div class="bh-head"><span class="bn">B1</span><h3>Non-human avatars — VRChat / VTuber</h3><span class="badge primary">Lead bet · 2nd in sequence</span></div>
-      <p class="who"><b>The prize, but the buyer is unresolved.</b> Rigging is a <i>priced line item</i> here — Fiverr rigs
-        run <b>$25&ndash;60</b>, quality full-body-tracking rigs <b>$400&ndash;600</b>, and inside a premium 3D VTuber model
-        ($1,300&ndash;10,000) the rig fee alone is <b>$500&ndash;2,000</b> and takes weeks. The open question (§07): sell that
-        to <b>artists</b> as a margin-expander, or sell <b>finished avatars</b> to end-users priced out of a full
-        commission? Test both. <b>&ldquo;VRC-ready&rdquo; is concrete:</b> Unity-Humanoid armature, VRM export, 15 visemes,
-        eye bones, dynamic-bone-ready tail/ears. <span class="dim">(Furry/feral is parked for now — held option below.)</span></p>
-      <div class="bh-grid">
-        <div class="bblock">
-          <div class="h">Where to find them</div>
-          <div class="chips">
-            <span class="chip">BOOTH</span><span class="chip">Gumroad</span><span class="chip">Jinxxy</span>
-            <span class="chip">VGen</span><span class="chip">VTuber.gg</span><span class="chip">VRChat avatar Discords</span>
-            <span class="chip">VTuber X/Twitter</span>
-          </div>
-        </div>
-        <div class="bblock">
-          <div class="h">The test offer (run both)</div>
-          <ul>
-            <li><b>A · Artists:</b> rig-as-a-service at <b>$60&ndash;150/rig</b> — &ldquo;same price to your client, 1 day not 3 weeks.&rdquo;</li>
-            <li><b>B · End-users:</b> finished creature/character avatar at <b>$120&ndash;250</b>, undercutting a full commission.</li>
-          </ul>
-        </div>
-        <div class="bblock">
-          <div class="h">First 10 customers</div>
-          <ul>
-            <li>DM 30 riggers with open VGen/Fiverr slots; rig their next job free, then priced.</li>
-            <li>Post one creature-avatar rig turnaround in 2 VRChat avatar Discords; convert replies.</li>
-          </ul>
-        </div>
-        <div class="bblock">
-          <div class="h">Targets by week 6</div>
-          <ul>
-            <li>≥ <b>60%</b> pass the concrete VRC-ready bar on first pass.</li>
-            <li>≥ <b>10 paid</b> rigs/avatars at ≥ <b>$60</b> (whichever positioning wins).</li>
-            <li>≥ <b>3</b> buyers return for a 2nd; ≥ <b>1</b> unprompted referral.</li>
-          </ul>
-        </div>
-        <div class="bblock dd">
-          <div class="h">Signals to double down</div>
-          <ul>
-            <li>Artists quietly using it for <b>paid client work</b> (not just the free demo).</li>
-            <li>Organic mentions in VRChat/VTuber avatar Discords; inbound from one posted demo.</li>
-            <li>People asking for <b>more species / formats</b> — pull, not push.</li>
-          </ul>
-        </div>
-        <div class="bblock fold">
-          <div class="h">Signals to fold</div>
-          <ul>
-            <li>They love the demo but <b>won't send paid work</b>.</li>
-            <li>Output needs a <b>full re-rig</b> every time.</li>
-            <li>The <b>face/clothing/props</b> step (our differentiator vs Anything World) needs constant hand-fixing.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- B2 -->
-    <div class="bh reveal">
-      <div class="bh-head"><span class="bn">B2</span><h3>Indie game devs &amp; jammers</h3><span class="badge parallel">Funnel · 3rd in sequence</span></div>
-      <p class="who"><b>Distribution, not revenue.</b> A free Unity/Godot plugin is the cheapest way to put the engine in
-        thousands of hands and generate proof + word-of-mouth — but conversion to paid is the weak link, so don't bank
-        on it for cash. Land free; monetize a <b>$15&ndash;25/mo commercial seat</b> later. Honest caveat: jam-grade
-        &ldquo;rig + idle loop&rdquo; is in reach; full locomotion is not yet, so scope the promise to idle.</p>
-      <div class="bh-grid">
-        <div class="bblock">
-          <div class="h">Where to find them</div>
-          <div class="chips">
-            <span class="chip">Game Dev Network Discord</span><span class="chip">r/gamedev</span>
-            <span class="chip">itch.io</span><span class="chip">Ludum Dare</span><span class="chip">GMTK Jam</span>
-          </div>
-        </div>
-        <div class="bblock">
-          <div class="h">The test offer</div>
-          <ul>
-            <li>Free <b>Unity / Godot plugin</b>: drop in a creature mesh → rig + idle/walk loop.</li>
-            <li>Sponsor or seed <b>one jam</b>; be present in the Discord during it.</li>
-          </ul>
-        </div>
-        <div class="bblock">
-          <div class="h">Primary metrics</div>
-          <ul>
-            <li><b>Install → activation</b> (first successful non-human rig).</li>
-            <li><b>Return use</b> across ≥ 2 sessions.</li>
-            <li><b>Shipped games</b> crediting the plugin.</li>
-          </ul>
-        </div>
-        <div class="bblock">
-          <div class="h">Targets to clear</div>
-          <ul>
-            <li><b>200</b> installs off one jam; ≥ <b>30%</b> activation.</li>
-            <li>≥ <b>15%</b> return after the jam ends.</li>
-            <li>≥ <b>5</b> shipped jam games using it.</li>
-          </ul>
-        </div>
-        <div class="bblock dd">
-          <div class="h">Signals to double down</div>
-          <ul>
-            <li>Plugin <b>spreads organically</b> between devs.</li>
-            <li>Real <b>feature requests</b> — a sign of genuine use.</li>
-            <li>Games crediting it; Discord pull toward a paid tier.</li>
-          </ul>
-        </div>
-        <div class="bblock fold">
-          <div class="h">Signals to fold</div>
-          <ul>
-            <li>Installs but <b>no activation</b>.</li>
-            <li>Used only during the free jam, <b>never again</b>.</li>
-            <li>Devs prefer to <b>hand-rig</b> — control beats speed for them.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- B3 -->
-    <div class="bh reveal">
-      <div class="bh-head"><span class="bn">B3</span><h3>Tabletop VTT tokens &amp; minis</h3><span class="badge good">Run first · cash &amp; engine proof</span></div>
-      <p class="who"><b>The easiest quality bar we'll face, and the fastest dollar.</b> Tokens are ~100% non-human and
-        the need is one 4-sec idle loop — exactly what ships today, no locomotion required. Proven paid market
-        (Beneos' token Patreon has <b>2,333 members</b> — a ~$12&ndash;25k/mo ceiling). Concrete deliverable: a
-        <b>lightweight looping token, ~256&ndash;512px, top-down</b>, drag-drop into Foundry — keep files small (Beneos cut
-        filesize 92% in 2025 moving off heavy WebM to 2.5D; don't repeat their mistake). Run this first to prove the
-        engine and bank revenue.</p>
-      <div class="bh-grid">
-        <div class="bblock">
-          <div class="h">Where to find them</div>
-          <div class="chips">
-            <span class="chip">Foundry VTT Discord</span><span class="chip">Roll20 communities</span>
-            <span class="chip">r/FoundryVTT</span><span class="chip">Cults3D</span><span class="chip">token Patreons</span>
-          </div>
-        </div>
-        <div class="bblock">
-          <div class="h">The test offer (two paths)</div>
-          <ul>
-            <li><b>Own Patreon:</b> animated token packs at <b>$5&ndash;8/mo</b> — fastest to first dollar.</li>
-            <li><b>License to creators:</b> run their backlog through the batch pipeline for a <b>20&ndash;30% rev-share</b>.</li>
-          </ul>
-        </div>
-        <div class="bblock">
-          <div class="h">First 10 customers</div>
-          <ul>
-            <li>Drop a free 10-token animated pack in r/FoundryVTT + Foundry Discord; gate the rest behind Patreon.</li>
-            <li>DM 5 existing token creators with a sample of <i>their own</i> art, animated.</li>
-          </ul>
-        </div>
-        <div class="bblock">
-          <div class="h">Targets by week 6</div>
-          <ul>
-            <li>≥ <b>30</b> animated tokens/day at the quality bar (vs ~2&ndash;3 hand-made).</li>
-            <li><b>$300&ndash;500 MRR</b> from Patreon <i>or</i> 1 signed creator rev-share.</li>
-            <li>GM downloads climbing pack-over-pack.</li>
-          </ul>
-        </div>
-        <div class="bblock dd">
-          <div class="h">Signals to double down</div>
-          <ul>
-            <li>A creator <b>switches their pipeline</b> to us.</li>
-            <li>GMs request more sets; downloads climb.</li>
-            <li>Patreon <b>MRR compounds</b> month over month.</li>
-          </ul>
-        </div>
-        <div class="bblock fold">
-          <div class="h">Signals to fold</div>
-          <ul>
-            <li>Quality bar <b>fails at small scale</b> (tokens are tiny but loops still read).</li>
-            <li>Market too <b>small or too cheap</b> to monetize.</li>
-            <li>Creators <b>won't share margin</b> and won't pay a fee.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- v2 held options -->
     <div class="grid-3 reveal">
-      <div class="card" style="border-color:rgba(240,196,120,.3)">
-        <div style="margin-bottom:10px"><span class="badge v2">Parked · revisit after B1</span></div>
-        <h4 style="font-size:1.08rem;margin-bottom:8px">Furry / feral avatars</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Deliberately <b style="color:var(--ink)">set aside for now</b> — it's the densest non-human pocket but a distinct community with its own norms, channels (FurAffinity, species Discords), and a heavier feral-topology bar. Prove the VRChat/VTuber wedge first, then re-open furry as the obvious expansion, not the entry point.</p>
-      </div>
-      <div class="card">
-        <div style="margin-bottom:10px"><span class="badge v2">v2 · breakout</span></div>
-        <h4 style="font-size:1.08rem;margin-bottom:8px">Animated pet digital twin</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">The literal pet angle — an <b style="color:var(--ink)">animated</b> twin vs static-print incumbents (PrintPal). Highest emotion, broadest TAM, but consumer GTM is its own beast. Hold as the v2 breakout once the engine and channels are proven.</p>
-      </div>
-      <div class="card">
-        <div style="margin-bottom:10px"><span class="badge v2">v2 · secondary</span></div>
-        <h4 style="font-size:1.08rem;margin-bottom:8px">AR-filter creators</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">TikTok Effect House &amp; Snap Lens creators need articulated props and creatures. Reuses the same creator-channel muscle. Cheap to test later as an offshoot of B2.</p>
-      </div>
-      <div class="card">
-        <div style="margin-bottom:10px"><span class="badge v2">v2 · secondary</span></div>
-        <h4 style="font-size:1.08rem;margin-bottom:8px">Asset-marketplace sellers</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Sellers packaging animated non-human asset packs. A supply-side play that piggybacks on the same output — low priority until a primary beachhead is winning.</p>
-      </div>
+      <div class="scard"><div class="ic">🛒</div><h4>Living commerce</h4><p>Products that demonstrate themselves — furniture folding, gadgets opening — and clothing that moves on you in virtual try-on. Static turntables become living storefronts.</p><div class="tagline">ecommerce vector</div></div>
+      <div class="scard"><div class="ic">🤖</div><h4>Physical-AI motion data</h4><p>Synthetic 4D motion at scale to train robots, embodied agents, and world-models. Motion data is the scarce input — and we mint it as a by-product of everything else.</p><div class="tagline">Physical AI vector · high ACV</div></div>
+      <div class="scard"><div class="ic">✨</div><h4>Canva for 3D animation</h4><p>Anyone — no Blender, no rigging — types or sketches and gets a usable animated character or object. The consumer/prosumer breakout segment.</p><div class="tagline">creator/consumer vector</div></div>
+      <div class="scard"><div class="ic">🎮</div><h4>Animated UGC for game platforms</h4><p>Roblox, Minecraft, Fortnite, and indie devs auto-animate their creatures, avatars, and items. The platforms have the users; they lack the motion.</p><div class="tagline">games vector</div></div>
+      <div class="scard"><div class="ic">🐾</div><h4>Personal worlds</h4><p>Animated pet digital-twins, personal avatars, moving keepsakes, expressive stickers &amp; emotes. Emotion-led, viral, mass-consumer.</p><div class="tagline">consumer vector</div></div>
+      <div class="scard"><div class="ic">🕶️</div><h4>Spatial content layer</h4><p>The moving-content supply for AR filters and headset XR — where good-enough motion is <i>more</i> forgiving and the world is starving for assets.</p><div class="tagline">AR/VR vector</div></div>
     </div>
-  </div>
-</section>
-
-<!-- UNIT ECONOMICS -->
-<section id="econ">
-  <div class="wrap">
-    <span class="eyebrow reveal">04 · Unit economics</span>
-    <div class="sec-head reveal"><h2 class="title">Is a rig a business? The math, per beachhead</h2></div>
-    <p class="lead reveal">A wedge only matters if the unit economics work. The price columns below are now <b>anchored to
-      real June 2026 market data</b> (sources at foot); cost-to-serve is still the assumption to validate in week 0.
-      Compute-per-rig is cheap, so margin is high everywhere; the real variable is <b>price the market will bear</b> and
-      <b>how fast you reach a paying customer</b>.</p>
-
-    <div class="tbl-wrap reveal">
-      <table>
-        <thead><tr><th>Beachhead</th><th>Market pays today (sourced)</th><th>We charge</th><th>Cost to serve*</th><th>Path to first $1k MRR</th></tr></thead>
-        <tbody>
-          <tr><td><b>Tokens</b> <span class="badge good" style="margin-left:4px">first</span></td>
-            <td>Packs $5&ndash;15; Beneos Patreon <b>2,333 members</b> (~$12&ndash;25k/mo)</td>
-            <td><span class="mono">$5&ndash;8/mo</span> Patreon, or 20&ndash;30% rev-share</td>
-            <td>pennies / token</td>
-            <td class="tgt">~150&ndash;200 subs <i>or</i> 1&ndash;2 creator deals</td></tr>
-          <tr><td><b>Avatars</b> <span class="badge primary" style="margin-left:4px">lead</span></td>
-            <td>3D VTuber model $1,300&ndash;10k; <b>rig fee alone $500&ndash;2,000</b>; budget rigs $25&ndash;600</td>
-            <td><span class="mono">$60&ndash;150</span>/rig or <span class="mono">$120&ndash;250</span>/avatar</td>
-            <td>~$1&ndash;3 compute / rig</td>
-            <td class="tgt">~8&ndash;15 paid rigs / mo</td></tr>
-          <tr><td><b>Game devs</b> <span class="badge parallel" style="margin-left:4px">funnel</span></td>
-            <td>Rig gigs $50&ndash;300; Anything World <b>$50/mo</b> is the price ceiling</td>
-            <td>Free → <span class="mono">$15&ndash;25/mo</span> commercial seat</td>
-            <td>compute / rig</td>
-            <td class="tgt">~50&ndash;70 pro seats (hard — it's a funnel)</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">*Cost-to-serve is the single biggest unvalidated number — measure real GPU-seconds per rig in week 0 before trusting any margin here.</p>
-
     <div class="callout reveal">
-      <div class="h">What the data changed</div>
-      <p>The pressure test <b>raised</b> the avatar numbers: rigging is a real priced line item ($500&ndash;2,000 inside a
-        premium VTuber model), so we under-charged at $40 — corrected to <b>$60&ndash;150/rig</b>. Fewer, pricier rigs hit
-        $1k MRR faster. <b>Tokens validated</b> (Beneos' 2,333 members confirms a $12&ndash;25k/mo ceiling). The one
-        caution: Beneos <i>moved off animated WebM to lighter 2.5D tokens in 2025</i> to cut filesize 92% — so our token
-        deliverable should target <b>lightweight loops</b>, not heavy video. <b>Anything World's $50/mo caps</b> what game
-        devs will pay for a rig tool — which is why B2 is a funnel, not a revenue line.</p>
+      <div class="h">The dream, stated plainly</div>
+      <p>If anyone can make any 3D thing move in seconds, then <b>every game gets richer, every product page comes alive,
+        every classroom and ad animates, every robot gets more data, and a hundred million people make moving 3D who
+        never could.</b> Temporial is the engine under all of it. That is the company — the rest of this page is how you
+        earn the right to build it.</p>
     </div>
   </div>
 </section>
 
-<!-- METRICS -->
-<section id="metrics">
+<!-- RIGHT TO WIN -->
+<section id="moat">
   <div class="wrap">
-    <span class="eyebrow reveal">05 · Measurement framework</span>
-    <div class="sec-head reveal"><h2 class="title">One north-star, one funnel, every channel</h2></div>
+    <span class="eyebrow reveal">04 · Our right to win</span>
+    <div class="sec-head reveal"><h2 class="title">Why us — and why this compounds instead of commoditizing</h2></div>
+    <p class="lead reveal">Be honest about what is <i>not</i> our right to win: <b>static generation</b>. It's commoditizing — the
+      labs and Meshy/Tripo/CSM will give text→3D away. We win the layer above it, on four reinforcing pillars.</p>
 
-    <div class="north reveal">
-      <div class="tag">North-star · product truth</div>
-      <h3>Non-human Rig Success Rate</h3>
-      <p>The share of <b>arbitrary, topologically diverse</b> non-human meshes that produce an accept-quality rig +
-        loop with ≤ minor cleanup. This is the wedge quantified — and the coverage that compounds into a real moat.
-        Track it <b>per topology class</b> (quadruped, bird,
-        fish, insect, prop) so you see exactly where coverage is thin. If this number is low, channel metrics are
-        noise — fix the engine before scaling spend.</p>
-    </div>
-
-    <p class="lead reveal" style="margin-top:30px">Under the north-star, every channel runs the same funnel. Watch
-      for the drop-off stage — that's what to fix or fold on.</p>
-    <div class="funnel reveal">
-      <div class="fstep"><div class="n">01 · REACH</div><div class="t">Community touch</div><div class="d">Demos seen, Discord/post impressions, replies.</div></div>
-      <div class="fstep"><div class="n">02 · TRIAL</div><div class="t">First upload</div><div class="d">They actually run a mesh through it.</div></div>
-      <div class="fstep"><div class="n">03 · ACTIVATION</div><div class="t">First good asset</div><div class="d">First accept-quality non-human rig out.</div></div>
-      <div class="fstep"><div class="n">04 · REPEAT</div><div class="t">Second use</div><div class="d">Comes back with new, unprompted work.</div></div>
-      <div class="fstep"><div class="n">05 · PAID</div><div class="t">Money changes hands</div><div class="d">Real payment — not &ldquo;I'd pay.&rdquo;</div></div>
-      <div class="fstep"><div class="n">06 · REFERRAL</div><div class="t">Word of mouth</div><div class="d">Tells the community unprompted.</div></div>
-    </div>
-
-    <div class="grid-2 reveal" style="margin-top:26px">
+    <div class="grid-2 reveal">
       <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:12px">Demand-intensity proxies (look before you build)</h4>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> Commission <b style="color:var(--ink)">backlog length</b> — how booked-out are non-human artists?</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> Frequency of <b style="color:var(--ink)">&ldquo;can anyone rig my [animal]?&rdquo;</b> asks in communities.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> <b style="color:var(--ink)">Price of comparable commissions</b> — anchors our pricing.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> Existing <b style="color:var(--ink)">paid Patreons</b> in the niche (proves money flows).</li>
-        </ul>
+        <h4 style="font-size:1.08rem;margin-bottom:8px">1 · Depth in the hardest layer</h4>
+        <p class="muted" style="font-size:.92rem;font-weight:300">Motion on <b style="color:var(--ink)">arbitrary, non-human topology</b> is where every generalist stops: Mixamo is humanoid-only, Meshy assumes a biped, and Anything World ships bare bones — no faces, clothing, or props, and decimates high-poly. We go deepest exactly where the value is hardest to reach.</p>
+      </div>
+      <div class="card" style="border-color:rgba(94,240,168,.3)">
+        <h4 style="font-size:1.08rem;margin-bottom:8px">2 · The 4D motion-data flywheel</h4>
+        <p class="muted" style="font-size:.92rem;font-weight:300">Unlike text and images, <b style="color:var(--ink)">4D motion data is scarce</b>. Every asset we animate is a proprietary input→rigged-animated pair. The dataset compounds with use into something no generation lab has — and it's what makes the motion model better than anyone can copy.</p>
       </div>
       <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:12px">The metrics that actually decide it</h4>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">Activation rate</b> — the single best leading indicator of value.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">Paid conversion &amp; repeat</b> — revealed willingness to pay.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">Referral coefficient</b> — these communities are small &amp; high-trust: virality or death.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--good)">›</span> <b style="color:var(--ink)">CAC via community</b> — should be ≈ free; if you're buying users, the wedge is wrong.</li>
-        </ul>
+        <h4 style="font-size:1.08rem;margin-bottom:8px">3 · Horizontal embedding</h4>
+        <p class="muted" style="font-size:.92rem;font-weight:300">As a <b style="color:var(--ink)">motion API / layer</b>, not a vertical app, we embed across games, AR, commerce, and Physical AI — riding everyone's growth via B2B2C. The same engine serves six vectors, so distribution and data reinforce each other.</p>
       </div>
+      <div class="card">
+        <h4 style="font-size:1.08rem;margin-bottom:8px">4 · Speed &amp; good-enough</h4>
+        <p class="muted" style="font-size:.92rem;font-weight:300">We <b style="color:var(--ink)">productize the just-now-possible before it's perfect</b>, winning jank-tolerant creator communities first while incumbents wait for polish. Distribution + data accrue while others debate quality bars.</p>
+      </div>
+    </div>
+    <div class="callout accent reveal">
+      <div class="h">The one-line thesis</div>
+      <p>We win the motion layer because we go <b>deepest on the hardest problem</b> and compound the <b>scarcest data</b>,
+        then embed that everywhere. Generation is a race to zero; <b>motion + data is a flywheel</b>. The wedge is
+        copyable for a quarter; the data and the distribution it buys are not.</p>
     </div>
   </div>
 </section>
 
-<!-- TEST PLAN -->
-<section id="plan">
+<!-- =================== PART II — BOTTOM-UP =================== -->
+<section id="wedge" style="padding-bottom:30px">
   <div class="wrap">
-    <span class="eyebrow reveal">06 · The test</span>
-    <div class="sec-head reveal"><h2 class="title">A sequenced 8-week run — tokens for cash, avatars for the bet</h2></div>
-    <p class="lead reveal">Tight, instrumented, and biased toward putting <b>real paid work</b> through the engine — not
-      demos. One paid push at a time; pricing is part of the experiment, not an afterthought.</p>
+    <div class="part-divider reveal" style="margin-bottom:46px"></div>
+    <span class="part-tag reveal">Part II · Bottom-up — the concrete plan</span>
+    <span class="eyebrow good reveal">05 · The wedge</span>
+    <div class="sec-head reveal"><h2 class="title">Start narrow on purpose — the on-ramp to the motion layer</h2></div>
+    <p class="lead reveal">A three-person team can't boil a $100B ocean. The wedge has to do four jobs at once: <b>make money
+      now, generate the motion data, build distribution, and sit in a fast-growing vector.</b> That points to one
+      on-ramp: <b>non-human / arbitrary-topology creator assets</b> — and not just VTuber/VRChat.</p>
 
-    <div class="timeline reveal">
-      <div class="tl"><div class="wk">Week 0</div><div class="body"><h4>Instrument &amp; recruit</h4><p>Nail the two numbers everything rests on: <b>GPU-seconds per rig</b> (cost-to-serve) and the concrete <b>accept-quality bar</b> per beachhead. Stand up funnel tracking. Line up 5 token creators and 30 avatar artists/buyers.</p></div></div>
-      <div class="tl"><div class="wk">Weeks 1&ndash;2</div><div class="body"><h4>Push tokens, probe avatars</h4><p><b>Paid push:</b> ship the token Patreon + one creator rev-share. <b>In parallel (discovery only):</b> run the B1 positioning A/B — free rigs to artists vs. finished avatars to end-users — to see which buyer pulls. No game-dev work yet.</p></div></div>
-      <div class="tl"><div class="wk">Weeks 3&ndash;6</div><div class="body"><h4>Scale what converts, charge for avatars</h4><p>Grow the token line toward <b>$300&ndash;500 MRR</b>. Flip the winning avatar positioning to <b>real money</b> (≥10 paid). Capture rig-success-rate by topology, repeat, and payment. Defer the game-dev plugin.</p></div></div>
-      <div class="tl"><div class="wk">Weeks 7&ndash;8</div><div class="body"><h4>Decision gate</h4><p>Score against the gate below. Commit to the <b>one</b> lead beachhead; spin up the game-dev funnel only if the engine has clearly proven out. Kill the rest cleanly.</p></div></div>
-    </div>
-
-    <div class="split reveal" style="margin-top:30px">
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:12px">Pricing experiments to run</h4>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> <b style="color:var(--ink)">Per-rig / per-asset</b> (B1, B3) — anchor against existing commission prices.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> <b style="color:var(--ink)">Free tool + paid commercial/pro tier</b> (B2) — land free, monetize the studio.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> <b style="color:var(--ink)">Creator rev-share or our own Patreon</b> (B3).</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">$</span> Test the <b style="color:var(--ink)">painkiller framing</b> (&ldquo;skip the weight-painting&rdquo;) vs volume framing.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:12px">Guardrails for a clean test</h4>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:9px">
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Measure <b style="color:var(--ink)">paid behavior</b>, not stated intent.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Don't over-serve design partners by hand — it hides the real activation rate.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Keep CAC honest: community pull should be near-free, not bought.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> Give the engine <b style="color:var(--ink)">2 iterations</b> on a quality gap before folding a beachhead.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HARD TRUTHS -->
-<section id="risks">
-  <div class="wrap">
-    <span class="eyebrow reveal">07 · Hard truths</span>
-    <div class="sec-head reveal"><h2 class="title">Five things that could kill this — and the test that de-risks each</h2></div>
-    <p class="lead reveal">A strategy is only honest if it names what could break it. Each risk below has a concrete
-      experiment attached; if the experiment fails, that's signal, not failure.</p>
-
-    <div class="grid-2 reveal" style="margin-top:26px">
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">1 · Avatar artists see us as a <span style="color:var(--bad)">threat</span></h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">We automate exactly what they charge for; they may refuse to adopt us.
-          <b style="color:var(--ink)">De-risk:</b> A/B two B1 positionings in weeks 1&ndash;4 — artist margin-expander vs. direct-to-end-user. Whichever pulls <i>is</i> the real B1; if neither does, B1 isn't ready and tokens carry the quarter.</p>
-      </div>
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">2 · &ldquo;Non-human&rdquo; avatars are mostly <span style="color:var(--warm)">humanoid</span> rigs</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Most VRChat/VTuber creature avatars ride a Unity-Humanoid armature with visemes &amp; dynamic bones — the differentiator is the <i>face + clothing + props</i>, not an exotic skeleton (which is also why furry/feral is parked).
-          <b style="color:var(--ink)">De-risk:</b> Measure against the concrete VRC-ready bar (Humanoid map + 15 visemes + dynamic-bone tail/ears), exactly where Anything World stops.</p>
-      </div>
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">3 · &ldquo;Motion in minutes&rdquo; <span style="color:var(--warm)">outruns the tech</span></h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Rigging (SkinTokens) is solid; believable locomotion is hard and the 4D path is heavy / no-loops / ~28 min per clip.
-          <b style="color:var(--ink)">De-risk:</b> Sell only what ships today — <b style="color:var(--ink)">rig + idle loop</b>. Scope every promise to idle until robust looped locomotion exists. This is why tokens (idle-only) lead.</p>
-      </div>
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">4 · The wedge is <span style="color:var(--bad)">copyable</span></h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Meshy or Anything World could add non-human rigging.
-          <b style="color:var(--ink)">De-risk:</b> Instrument which moat candidate is actually forming — plugin lock-in, community brand, or coverage data (§01). If by week 12 none is, we've proven a feature, not a company, and should rethink.</p>
-      </div>
-      <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">5 · A small team <span style="color:var(--bad)">spread thin</span></h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Three GTMs + engine work = all three done badly.
-          <b style="color:var(--ink)">De-risk:</b> One paid push at a time (§02). Tokens now, avatars next, game-dev funnel last. Shared discovery is fine; shared <i>go-to-market focus</i> is not.</p>
-      </div>
-      <div class="card" style="border-color:rgba(124,196,255,.25)">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">Why-now, in one line</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Generation got cheap and good, so the bottleneck moved <i>downstream</i> to rigging &amp; motion — and the incumbents there are all biped-only. The window is the gap between &ldquo;everyone can make a mesh&rdquo; and &ldquo;someone can rig the weird ones at volume.&rdquo; It won't stay open forever.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DECISION GATE -->
-<section id="gate">
-  <div class="wrap">
-    <span class="eyebrow reveal">08 · The decision</span>
-    <div class="sec-head reveal"><h2 class="title">Scale, iterate, or fold</h2></div>
-    <p class="lead reveal">At week 8, every beachhead lands in exactly one column. Be disciplined: a beloved demo that
-      won't convert is a <i>fold</i>, not an iterate.</p>
-
-    <div class="gate reveal">
-      <div class="gcol scale">
-        <div class="gh">Double down if…</div>
+    <div class="split reveal">
+      <div class="listcard do card">
+        <h4><span class="badge good">Wedge selection criteria</span></h4>
         <ul>
-          <li><b>Rig success ≥ bar</b> across the topology classes this audience uses.</li>
-          <li>Multiple <b>paid repeats</b> — same users coming back with money.</li>
-          <li><b>Organic referral</b> present inside the community.</li>
-          <li><b>CAC ≈ free</b> — growth is pull, not push.</li>
+          <li><b>Arbitrary-topology dense</b> — where our depth beats generalists.</li>
+          <li><b>Jank-tolerant</b> — good-enough ships; no cinematic bar.</li>
+          <li><b>Already paying</b> — revealed demand, not a waitlist.</li>
+          <li><b>Small-team-accessible</b> — global, digital-native, self-serve.</li>
+          <li><b>Feeds the flywheel</b> — every job mints motion data.</li>
         </ul>
       </div>
-      <div class="gcol iterate">
-        <div class="gh">Iterate if…</div>
+      <div class="listcard do card" style="border-color:rgba(124,196,255,.25)">
+        <h4><span class="badge primary">The on-ramp (broadened)</span></h4>
         <ul>
-          <li>Strong <b>love &amp; activation</b> but weak monetization → fix pricing/packaging.</li>
-          <li>Strong <b>demand</b> but quality gaps → one more engine iteration.</li>
-          <li>It's working but the <b>wrong buyer</b> (end-creator not artist, GM not creator).</li>
-        </ul>
-      </div>
-      <div class="gcol fold">
-        <div class="gh">Fold if…</div>
-        <ul>
-          <li><b>No activation</b> — they won't get a first asset out.</li>
-          <li><b>No willingness to pay</b> after price tests.</li>
-          <li>Quality <b>can't clear the bar</b> after 2 iterations.</li>
-          <li>Market is real but <b>too small or too cheap</b> to matter.</li>
+          <li><b>VTT tokens</b> — ~100% non-human, idle-loop bar, proven Patreon market. <i>Run first for cash.</i></li>
+          <li><b>Creature avatars</b> — VTuber/VRChat <b>and</b> Roblox/Minecraft/Fortnite UGC, not just one app.</li>
+          <li><b>Indie-dev creatures &amp; props</b> — Unity/Godot/UEFN, Mixamo can't touch them.</li>
+          <li><b>Mobile-AR characters</b> — Snap/TikTok effect creators, real volume today.</li>
         </ul>
       </div>
     </div>
-
     <div class="callout reveal">
-      <div class="h">Default expectation</div>
-      <p>The base case: <b>tokens (B3)</b> bank the first revenue and prove the engine in weeks 1&ndash;6, while the
-        <b>avatar (B1)</b> positioning A/B runs in discovery. By week 8 the <b>lead bet is avatars</b> — densest demand,
-        highest $/customer — <i>provided</i> a buyer clearly pulled; if not, tokens become the lead and avatars go back
-        to the bench. <b>Game devs (B2)</b> spin up only after, as a funnel. Hold the <b>animated pet twin</b> as the
-        consumer breakout for once the engine and channels are proven.</p>
+      <div class="h">Why broaden beyond VTuber/VRChat</div>
+      <p>VRChat alone is small (~8.2M registered, a ~350-creator economy) — it can't be the business. But the same engine
+        serves <b>Roblox (tens of millions of daily creators-as-users), Minecraft, indie gamedev, and AR</b>. Same
+        non-human-motion capability, an order of magnitude more demand. The wedge is the <i>capability</i>, not the
+        community.</p>
     </div>
   </div>
 </section>
 
-<!-- FINANCIAL MODEL -->
+<!-- THE LADDER -->
+<section id="ladder" style="padding-top:30px">
+  <div class="wrap">
+    <span class="eyebrow good reveal">06 · The ladder</span>
+    <div class="sec-head reveal"><h2 class="title">Wedge → horizontal → infrastructure → new markets</h2></div>
+    <p class="lead reveal">Climb in sequence, with gates — each level must show pull before you fund the next. This is how
+      &ldquo;do whatever it takes&rdquo; stays focused instead of spreading a great team across six fronts at once.</p>
+
+    <div class="reveal" style="margin-top:24px">
+      <div class="rung" style="background:rgba(94,240,168,.04)">
+        <span class="lv" style="color:var(--good)">L0 · Wedge</span>
+        <span class="desc"><b>Non-human creator assets</b> — tokens + creature avatars + indie creatures. Revenue, proof, and the first motion data.</span>
+        <span class="badge good">~$1&ndash;2M</span></div>
+      <div class="rung">
+        <span class="lv" style="color:var(--accent)">L1 · Horizontal</span>
+        <span class="desc"><b>Self-serve for every creator</b> — indie gamedev, Roblox/UGC, mobile-AR, video, education, hobbyist 3D. Add text→4D.</span>
+        <span class="badge primary">the $10M layer</span></div>
+      <div class="rung">
+        <span class="lv" style="color:var(--accent)">L2 · Infrastructure</span>
+        <span class="desc"><b>The motion API, embedded</b> — Roblox/UEFN, Snap/TikTok, game engines, commerce platforms. Ride their user bases (B2B2C).</span>
+        <span class="badge primary">$10M→$100M</span></div>
+      <div class="rung" style="background:rgba(124,196,255,.05);border-color:rgba(124,196,255,.3)">
+        <span class="lv grad">L3 · New markets</span>
+        <span class="desc"><b>Segments we create</b> — Physical-AI motion data, living commerce, the consumer &ldquo;animate anything&rdquo; app + pet twin.</span>
+        <span class="badge good">the real prize</span></div>
+    </div>
+    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:14px">Each rung widens the user and deepens the data moat. The market vectors (§02) map onto L1&ndash;L3; the wedge (§05) is L0.</p>
+  </div>
+</section>
+
+<!-- THE MODEL -->
 <section id="model">
   <div class="wrap">
-    <span class="eyebrow reveal">09 · Financial model</span>
-    <div class="sec-head reveal"><h2 class="title">Risk-adjusted: ~$0.7M top line in Year 3, exiting near $1M ARR at ~85% gross</h2></div>
-    <p class="lead reveal">&ldquo;Land 2/3 of early GTM&rdquo; modelled concretely: <b>tokens and avatars become real
-      revenue lines; game-devs stays a non-monetized funnel</b> (the 1/3 we don't bank). Prices are the sourced §04
-      figures; the risk-adjustment is a <b>~0.55&times; haircut</b> off a clean-execution case, since landing a beachhead
-      isn't the same as nailing it. Numbers are <i>recognized revenue</i>, with Year-3 exit run-rate (ARR) alongside.</p>
+    <span class="eyebrow good reveal">07 · The model</span>
+    <div class="sec-head reveal"><h2 class="title">The numbers: a profitable base, a venture upside, a clear fork</h2></div>
+    <p class="lead reveal">Two honest shapes. The <b>lean base</b> (land 2 of 3 wedges) is a real, profitable business. The
+      <b>$10M+ path</b> needs the L1&ndash;L2 product inflection and capital. Prices are sourced (June 2026); cost-to-serve
+      is the number to validate in week 0.</p>
 
     <div class="tbl-wrap reveal">
       <table>
-        <thead><tr><th>Revenue line</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>Exit ARR (Y3)</th><th>Gross margin</th></tr></thead>
+        <thead><tr><th>Path</th><th>Y3 revenue</th><th>Exit ARR</th><th>Gross margin</th><th>What it requires</th></tr></thead>
         <tbody>
-          <tr><td><b>Tokens</b> <span class="badge good" style="margin-left:4px">landed</span><br><span class="dim" style="font-size:.78rem">Patreon + creator rev-share</span></td>
-            <td class="mono">$12k</td><td class="mono">$60k</td><td class="mono">$130k</td><td class="tgt">~$150k</td><td>~83%</td></tr>
-          <tr><td><b>Avatars</b> <span class="badge primary" style="margin-left:4px">landed</span><br><span class="dim" style="font-size:.78rem">rigs $90 + finished $180, blended ASP $120&ndash;150</span></td>
-            <td class="mono">$20k</td><td class="mono">$170k</td><td class="mono">$540k</td><td class="tgt">~$780k</td><td>~86%</td></tr>
-          <tr><td><b>Game devs</b> <span class="badge parallel" style="margin-left:4px">funnel only</span><br><span class="dim" style="font-size:.78rem">feeds the other two; pro-seat upside not counted</span></td>
-            <td class="mono">$0</td><td class="mono">$0</td><td class="mono">$0*</td><td class="dim">&mdash;</td><td class="dim">&mdash;</td></tr>
-          <tr style="background:rgba(124,196,255,.05)"><td><b>Total top line</b></td>
-            <td class="mono"><b>~$32k</b></td><td class="mono"><b>~$230k</b></td><td class="mono"><b>~$670k</b></td><td class="tgt"><b>~$930k</b></td><td><b>75% → 85%</b></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">*Game-dev pro-seats are real upside (~$40&ndash;80k ARR by Y3 if they convert) but excluded to honor the &ldquo;2/3 landed&rdquo; assumption.</p>
-
-    <div class="grid-3 reveal" style="margin-top:26px">
-      <div class="card" style="border-color:rgba(255,138,138,.3)">
-        <div style="margin-bottom:8px"><span class="badge trap">Bear · ~25%</span></div>
-        <h4 style="font-size:1.05rem;margin-bottom:6px">~$0.2&ndash;0.3M ARR</h4>
-        <p class="muted" style="font-size:.88rem;font-weight:300">Tokens land but avatars stall on the positioning question (§07). A real lifestyle business, not a venture outcome.</p>
-      </div>
-      <div class="card" style="border-color:rgba(124,196,255,.4)">
-        <div style="margin-bottom:8px"><span class="badge primary">Base · risk-adjusted · ~50%</span></div>
-        <h4 style="font-size:1.05rem;margin-bottom:6px">~$0.9&ndash;1.0M ARR</h4>
-        <p class="muted" style="font-size:.88rem;font-weight:300">The headline. Tokens + avatars both work; ~85% gross. ~430 avatar units/mo + ~1,800 token subs — small slices of a huge market.</p>
-      </div>
-      <div class="card" style="border-color:rgba(94,240,168,.4)">
-        <div style="margin-bottom:8px"><span class="badge good">Bull · ~25%</span></div>
-        <h4 style="font-size:1.05rem;margin-bottom:6px">~$1.6&ndash;1.8M ARR</h4>
-        <p class="muted" style="font-size:.88rem;font-weight:300">Both lines rip, the game-dev pro tier converts, and furry un-parks. Self-serve productization breaks the labor ceiling.</p>
-      </div>
-    </div>
-
-    <div class="callout reveal">
-      <div class="h">The margin story — and why SG is the unlock</div>
-      <p>Compute-per-rig is cents and tokens are pennies, so <b>gross margin climbs 75% → ~85%</b> as manual cleanup
-        automates away. The real lever is the <b>cost base</b>: at ~$670k revenue and ~85% gross, that's <b>~$570k gross
-        profit</b>. A lean Singapore team of ~5 runs at <b>~$400k all-in</b> — leaving a <b>~25&ndash;30% operating
-        margin, i.e. profitable in Year 3</b>. The identical team in SF/Bay Area costs 2&ndash;2.5&times; that and would
-        be deep in burn at the same revenue. <b>That's not &ldquo;no disadvantage&rdquo; — it's the thing that lets a
-        small team reach profitability at a revenue level where a Valley team can't.</b></p>
-    </div>
-  </div>
-</section>
-
-<!-- PATH TO $10M -->
-<section id="tenm">
-  <div class="wrap">
-    <span class="eyebrow reveal">10 · The $10M path</span>
-    <div class="sec-head reveal"><h2 class="title">Working backwards from $10M: what would have to be true</h2></div>
-    <p class="lead reveal">$10M in 3 years is ~10&times; the §09 base case — it is a <b>right-tail outcome (~25&ndash;30%
-      even with an exceptional team)</b>, not a forecast. The single hardest truth, double-checked below: <b>the avatar
-      beachhead can't get you there.</b> VRChat is only ~8.2M registered with a ~350-creator economy; avatar prosumers
-      cap the SaaS line near <b>$1&ndash;2M</b>. $10M only exists if the beachhead becomes the <i>wedge</i> for a
-      <b>horizontal creator product</b> and/or <b>platform infrastructure</b> — the Cursor move: enter a niche, but the
-      real TAM is everyone who rigs a character.</p>
-
-    <div class="north reveal" style="margin-top:26px">
-      <div class="tag">One way to assemble $10M ARR (Year 3)</div>
-      <div class="tbl-wrap" style="margin-top:14px;border-color:rgba(124,196,255,.2)">
-        <table>
-          <thead><tr><th>Revenue layer</th><th>Y3 ARR</th><th>What it takes</th></tr></thead>
-          <tbody>
-            <tr><td><b>Self-serve SaaS</b><br><span class="dim" style="font-size:.78rem">horizontal: gamedev + VTuber + VTT + hobbyist 3D</span></td>
-              <td class="tgt">$4.5M</td><td>~20k subs @ ~$225/yr — needs <b>~0.7&ndash;1M activated</b> free users @ 2&ndash;3% convert</td></tr>
-            <tr><td><b>Transactional / credits</b><br><span class="dim" style="font-size:.78rem">à-la-carte rigs &amp; packs</span></td>
-              <td class="tgt">$1.5M</td><td>self-serve pay-per-asset on top of the free tier</td></tr>
-            <tr><td><b>Creator licensing / marketplace take</b><br><span class="dim" style="font-size:.78rem">tokens, asset packs, rev-share</span></td>
-              <td class="tgt">$1.0M</td><td>~20&ndash;30% take on a network of reselling creators</td></tr>
-            <tr><td><b>B2B2C / API / platform deals</b><br><span class="dim" style="font-size:.78rem">be the rig+animate layer inside a platform</span></td>
-              <td class="tgt">$3.0M</td><td>~6&ndash;10 deals @ ~$350k, <i>or</i> 1&ndash;2 usage-based UGC-platform contracts</td></tr>
-            <tr style="background:rgba(124,196,255,.06)"><td><b>Total</b></td><td class="tgt"><b>$10.0M</b></td><td><b>~80% blended gross margin</b></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="muted" style="font-weight:300;margin-top:14px;font-size:.94rem">Trajectory: <b>Y1 ~$1M → Y2 ~$3.3M → Y3 ~$10M</b> (~3.2&times;/yr). That's <b>top-decile, product-led growth</b> — impossible on services, and it only happens if the <b>services→self-serve inflection lands by mid-Year-2</b>.</p>
-    </div>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:36px 0 4px">Four ways it actually plays out</h3>
-    <div class="tbl-wrap reveal">
-      <table>
-        <thead><tr><th>Scenario</th><th>Y3 revenue</th><th>What carries it</th><th>~P (great team)</th></tr></thead>
-        <tbody>
-          <tr><td><b>Services-capped</b> <span class="badge trap" style="margin-left:4px">null</span></td>
-            <td class="mono">$1.5&ndash;2.5M</td><td>Stays manual rigs/tokens; no product inflection</td><td>~40%</td></tr>
-          <tr><td><b>PLG-horizontal</b> <span class="badge good" style="margin-left:4px">$10M+</span></td>
-            <td class="mono">$8&ndash;12M</td><td>Self-serve rig+animate goes wide across all creators</td><td>~22%</td></tr>
-          <tr><td><b>Infrastructure / B2B2C</b> <span class="badge good" style="margin-left:4px">$10M+</span></td>
-            <td class="mono">$9&ndash;15M</td><td>Engine licensed into a UGC/avatar/game platform at scale</td><td>~13%</td></tr>
-          <tr><td><b>Consumer breakout</b> <span class="badge good" style="margin-left:4px">$10M+</span></td>
-            <td class="mono">$8&ndash;15M</td><td>Animated pet digital-twin hits + creator base underneath</td><td>~8%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">Scenarios overlap; combined <b>P($10M+) ≈ 25&ndash;30%</b> with an exceptional team, ~15% without. Expected value still sits at ~$2&ndash;3M — $10M is the right tail you architect <i>toward</i>, not the mean.</p>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:36px 0 4px">Assumptions, double-checked</h3>
-    <div class="tbl-wrap reveal">
-      <table>
-        <thead><tr><th>Assumption</th><th>Reality check (sourced)</th><th>Verdict</th></tr></thead>
-        <tbody>
-          <tr><td>Avatar prosumers can fund $10M</td><td>VRChat 8.2M registered; creator economy ~350 invited; paying avatar creators in low thousands</td><td><span style="color:var(--bad)">✗ False — caps ~$1&ndash;2M; must go horizontal</span></td></tr>
-          <tr><td>~0.7&ndash;1M activated users reachable</td><td>Unity has millions of devs; D&amp;D ~50M+ players; broad &ldquo;rigs a character&rdquo; pool is large</td><td><span style="color:var(--warm)">◐ Plausible but aggressive — needs a category-defining tool</span></td></tr>
-          <tr><td>Free→paid 2&ndash;3%</td><td>Benchmarks: 2&ndash;5% good, dev tools 1&ndash;3%, top-quartile 8&ndash;15%</td><td><span style="color:var(--good)">✓ Reasonable (kept conservative)</span></td></tr>
-          <tr><td>ARPU ~$20/mo</td><td>Cursor $20; Midjourney/creative tools $10&ndash;30</td><td><span style="color:var(--good)">✓ Reasonable</span></td></tr>
-          <tr><td>B2B2C $3M from 6&ndash;10 deals</td><td>Infra licensing $150k&ndash;1M ACV is normal; usage-based can exceed</td><td><span style="color:var(--warm)">◐ Realistic <i>if</i> the motion works — execution-heavy</span></td></tr>
-          <tr><td>Hit $10M while profitable</td><td>$10M-in-3yr PLG companies burn; needs seed + Series A (~$5&ndash;15M)</td><td><span style="color:var(--bad)">✗ No — expect burn; this is a fork (below)</span></td></tr>
+          <tr><td><b>Lean base</b> <span class="badge good" style="margin-left:4px">profitable</span></td><td class="mono">~$0.7M</td><td class="tgt">~$0.9&ndash;1.0M</td><td>~85%</td><td>tokens + avatars land; SG cost base → ~25&ndash;30% op margin</td></tr>
+          <tr><td><b>$10M path</b> <span class="badge primary" style="margin-left:4px">venture</span></td><td class="mono">~$10M</td><td class="tgt">~$0.9&ndash;1.0M+ → scaling</td><td>~80%</td><td>self-serve at scale + B2B2C deals; raise + burn</td></tr>
+          <tr><td><b>$100M arc</b> <span class="badge v2" style="margin-left:4px">the layer</span></td><td class="mono">L3 markets</td><td class="dim">&mdash;</td><td>&mdash;</td><td>become the motion infrastructure; Physical-AI data + consumer</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="gate reveal" style="margin-top:30px">
+    <div class="gate reveal" style="margin-top:26px">
       <div class="gcol scale">
-        <div class="gh">What must be true</div>
+        <div class="gh">The $10M stack (Year 3)</div>
         <ul>
-          <li><b>Services→self-serve inflection</b> by mid-Y2 — the wedge proves quality &amp; seeds data; the product must let non-experts self-rig.</li>
-          <li><b>Broaden the user</b> beyond avatars to every creator who rigs a character (the TAM unlock).</li>
-          <li><b>One lighthouse B2B2C deal</b> by Y2 to open the infrastructure layer.</li>
-          <li><b>Compute COGS stays ~cents/rig</b> at 1M-user scale, or gross margin erodes.</li>
+          <li><b>$4.5M</b> self-serve SaaS — ~20k subs across all creators.</li>
+          <li><b>$1.5M</b> transactional / credits.</li>
+          <li><b>$1.0M</b> creator licensing &amp; marketplace take.</li>
+          <li><b>$3.0M</b> B2B2C / platform / API deals.</li>
         </ul>
       </div>
       <div class="gcol iterate">
         <div class="gh">The capital fork</div>
         <ul>
-          <li><b>Lean path</b> (§09): bootstrap, ~$1M, <b>profitable</b> in SG. A real business.</li>
-          <li><b>$10M path</b>: raise <b>~$5&ndash;15M</b>, hire 20&ndash;40, spend the margin on growth, <b>burn through Y3</b>.</li>
-          <li>These are <b>different companies</b> — pick deliberately. The exceptional team makes the second fundable.</li>
+          <li><b>Lean:</b> bootstrap, ~$1M, profitable in SG.</li>
+          <li><b>$10M:</b> raise ~$5&ndash;15M, hire 20&ndash;40, burn for growth.</li>
+          <li>Different companies — the team makes the second fundable.</li>
         </ul>
       </div>
       <div class="gcol fold">
-        <div class="gh">What the team changes — and doesn't</div>
+        <div class="gh">What breaks the model</div>
         <ul>
-          <li><b>Raises P(bull):</b> faster shipping, better fundraising, hiring, B2B credibility.</li>
-          <li><b>Doesn't change the requirements:</b> the inflection, the TAM broadening, and the capital are structural.</li>
-          <li>A great team is the difference between ~15% and ~30% odds — not between $2M and $10M on the same plan.</li>
+          <li>Cost-to-serve &gt; ~2&ndash;3&times; assumption → margin gone.</li>
+          <li>No services→product inflection → caps ~$2M.</li>
+          <li>Motion quality never clears the &ldquo;usable&rdquo; bar.</li>
         </ul>
       </div>
     </div>
-
-    <div class="callout reveal">
-      <div class="h">The one cross-check that matters</div>
-      <p><b>Bottom-up from the beachhead</b> (VRChat/VTuber avatars only) reconciles to ~$1&ndash;2M — it <i>cannot</i> reach
-        $10M. So if anyone pitches &ldquo;$10M by scaling avatars,&rdquo; the arithmetic says no. $10M is a
-        <b>&ldquo;the beachhead earns the right to build a horizontal product or become infrastructure&rdquo;</b> story —
-        exactly Cursor's niche-to-horizontal move. Architect Year 1 around <b>data, brand, and a self-serve v1</b>, not
-        just services revenue, or the right tail is closed off before Year 2 begins.</p>
-    </div>
-  </div>
-</section>
-
-<!-- THE ARC -->
-<section id="arc">
-  <div class="wrap">
-    <span class="eyebrow reveal">11 · The arc</span>
-    <div class="sec-head reveal"><h2 class="title">From a wedge to a new market: democratizing 3D animation</h2></div>
-    <p class="lead reveal">The north star is <b>text + 2D → animated 4D, usable by non-pros</b>. If that lands, the prize
-      isn't a slice of the professional-animation market — it's the <b>far larger market that doesn't exist yet</b>: the
-      hundreds of millions who want moving 3D but were priced and skilled out. That's the real answer to &ldquo;is the
-      wedge copyable?&rdquo; — the moat isn't rigging, it's the <b>text/2D→4D data flywheel</b> + the segment you create.</p>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:34px 0 4px">The capability ladder (product north-star)</h3>
-    <p class="muted reveal" style="font-weight:300;margin-bottom:18px;max-width:74ch">Each rung widens who can use it. The
-      last rung — believable motion a non-pro never has to touch — is the hard, defensible one.</p>
-    <div class="reveal" style="display:flex;flex-direction:column;gap:2px">
-      <div style="display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(94,240,168,.04)">
-        <span class="mono" style="color:var(--good);font-size:.82rem">Rung 0 · now</span><span>Mesh → rig + idle loop (non-human)</span><span class="badge good">Have it</span></div>
-      <div style="display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px">
-        <span class="mono" style="color:var(--accent);font-size:.82rem">Rung 1</span><span>2D image → 3D → rigged → animated</span><span class="badge primary">Building</span></div>
-      <div style="display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px">
-        <span class="mono" style="color:var(--accent);font-size:.82rem">Rung 2</span><span>Text → 3D → rigged 4D (&ldquo;a dancing red panda&rdquo;)</span><span class="badge parallel">Next</span></div>
-      <div style="display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(240,196,120,.04)">
-        <span class="mono" style="color:var(--warm);font-size:.82rem">Rung 3 · hard</span><span><b>Believable looped motion / locomotion</b> a non-pro never edits</span><span class="badge v2">The moat-maker</span></div>
-      <div style="display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid rgba(124,196,255,.3);border-radius:12px;background:linear-gradient(100deg,rgba(124,196,255,.08),transparent)">
-        <span class="mono grad" style="font-size:.82rem">End state</span><span><b>Type or sketch → a usable animated 4D asset.</b> No rigging, no Blender.</span><span class="badge good">$100M arc</span></div>
-    </div>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:40px 0 4px">The market ladder (where the TAM actually is)</h3>
-    <div class="tbl-wrap reveal">
-      <table>
-        <thead><tr><th>Rung</th><th>Markets to expand into</th><th>Scale</th><th>Unlocks</th></tr></thead>
-        <tbody>
-          <tr><td><b>L0 · Wedge</b></td><td>VTuber/VRChat avatars, VTT tokens</td><td>creators · thousands</td><td class="dim">~$1&ndash;2M — proof + data + brand</td></tr>
-          <tr><td><b>L1 · Horizontal creators</b></td><td>Indie gamedev, mobile-AR filter creators, video/explainer, education, hobbyist 3D</td><td>millions</td><td class="tgt">the $10M layer (self-serve)</td></tr>
-          <tr><td><b>L2 · Platform infrastructure</b></td><td>Roblox/UEFN, Snap &amp; TikTok effects, Meta Horizon, game engines, avatar platforms</td><td>hundreds of millions of end-users</td><td class="tgt">the $10M→$100M leverage (B2B2C)</td></tr>
-          <tr><td><b>L3 · Market creation</b></td><td>Consumer &ldquo;make anything move,&rdquo; pet digital twin, social/messaging, <i>+ synthetic 4D data for AI/robotics</i></td><td>net-new demand</td><td class="tgt">the new segment — the real prize</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">Note L3's sleeper: animated 3D/4D is <b>training data for embodied AI &amp; world models</b> — same engine, enterprise ACV, perfect VC narrative.</p>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:40px 0 4px">Does democratization create a new segment? The precedent says yes</h3>
-    <div class="grid-2 reveal">
-      <div class="card">
-        <h4 style="font-size:1.02rem;margin-bottom:12px">Every time the skill barrier fell, the market grew 10&ndash;100&times;</h4>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> <b style="color:var(--ink)">Canva</b> → design (vs Photoshop): ~200M+ non-designers who never &ldquo;bought design.&rdquo;</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> <b style="color:var(--ink)">CapCut / TikTok</b> → video editing for everyone.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> <b style="color:var(--ink)">Roblox / UEFN</b> → game creation by amateurs.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--accent)">›</span> <b style="color:var(--ink)">Midjourney</b> → image-making; <b style="color:var(--ink)">Suno</b> → music.</li>
-        </ul>
-        <p class="muted" style="font-size:.88rem;font-weight:300;margin-top:12px">The logic is <b style="color:var(--ink)">Jevons + Wright's law</b>: collapse the cost/skill of producing X and total consumption rises super-linearly. 3D animation is <i>uniquely</i> ripe — the skill wall (rigging/animation) is the highest in all of content, and latent demand is everywhere.</p>
-      </div>
-      <div class="card" style="border-color:rgba(240,196,120,.3)">
-        <h4 style="font-size:1.02rem;margin-bottom:12px">The honest counterweight</h4>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> <b style="color:var(--ink)">Quality bar:</b> &ldquo;new market&rdquo; only opens if the output is <i>actually usable</i> — janky 4D activates no one. Rung 3 is the gate.</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> <b style="color:var(--ink)">Distribution is owned by platforms</b> (Roblox, Snap, TikTok). That argues for being the <i>engine inside them</i> (L2) before a standalone consumer app (L3).</li>
-          <li class="muted" style="font-size:.9rem;font-weight:300;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:var(--warm)">!</span> <b style="color:var(--ink)">Timing risk:</b> market-creation is the highest-variance bet — most fail on latent demand being thinner than hoped.</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:40px 0 4px">The AR/VR creator space — split it in two</h3>
-    <div class="grid-2 reveal">
-      <div class="card" style="border-color:rgba(94,240,168,.3)">
-        <div style="margin-bottom:8px"><span class="badge good">Now · real volume</span></div>
-        <h4 style="font-size:1.02rem;margin-bottom:6px">Mobile AR — Snap Lens, TikTok / Meta effects</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Hundreds of millions of users, thousands of effect creators, screen-AR not headsets. Animated non-human props &amp; characters are exactly the wedge. <b style="color:var(--ink)">Treat as an L1 channel now</b> — reuses the engine, real reach today.</p>
-      </div>
-      <div class="card" style="border-color:rgba(240,196,120,.3)">
-        <div style="margin-bottom:8px"><span class="badge v2">Later · exogenous timing</span></div>
-        <h4 style="font-size:1.02rem;margin-bottom:6px">Headset XR — Quest, Vision Pro, Android XR</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">The spiritual home of &ldquo;everything is animated 3D,&rdquo; and spatial makes good-enough motion <i>more</i> forgiving — but the installed base is small and the inflection isn't yours to control. <b style="color:var(--ink)">Position for it as L2/L3; don't bet the company on its timeline.</b></p>
-      </div>
-    </div>
-
-    <h3 class="reveal" style="font-size:1.3rem;margin:40px 0 4px">So what would it take?</h3>
-    <div class="timeline reveal">
-      <div class="tl"><div class="wk">Phase 1 · Y1</div><div class="body"><h4>Win the wedge, build the engine &amp; the flywheel</h4><p>Tokens + avatars for revenue &amp; proof; ship Rungs 0&ndash;1; <b>instrument the 4D data flywheel</b> from day one (every asset improves the model). Raise a <b>seed</b>. This is the disciplined §06 plan — don't skip it for the vision.</p></div></div>
-      <div class="tl"><div class="wk">Phase 2 · Y2</div><div class="body"><h4>Go horizontal + self-serve; add text→4D; land a lighthouse</h4><p>Broaden to all L1 creators with a self-serve product; ship Rung 2; add mobile-AR as a channel; sign <b>one platform/B2B2C deal</b> to crack L2. <b>Series A.</b> This is the $10M inflection.</p></div></div>
-      <div class="tl"><div class="wk">Phase 3 · Y3+</div><div class="body"><h4>Become infrastructure + create the consumer segment</h4><p>Embed the engine across UGC/AR platforms (L2); launch the consumer &ldquo;make anything move&rdquo; + pet twin (L3); open <b>synthetic-4D-data for AI</b>. <b>Series B.</b> The $10M→$100M arc and the new market.</p></div></div>
-    </div>
-
-    <div class="callout reveal">
-      <div class="h">The one discipline that makes &ldquo;whatever it takes&rdquo; work</div>
-      <p>&ldquo;We'll do anything&rdquo; is the exact moment focus dies. The arc is a <b>sequenced assault with gates</b>, not
-        a simultaneous one: each rung/level must show pull <i>before</i> you fund the next. The compounding moat — the
-        thing rigging alone never gave you — is the <b>text/2D→4D generation data flywheel</b> plus platform lock-in plus
-        brand. Capital and headcount are inputs you've already committed to; the scarce resource is <b>not spreading a
-        great team across four markets at once</b>. Win L0&rarr;L1&rarr;L2&rarr;L3 in order, and the new segment is
-        yours to create.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SINGAPORE -->
-<section id="sg">
-  <div class="wrap">
-    <span class="eyebrow reveal">12 · Geography &amp; focus</span>
-    <div class="sec-head reveal"><h2 class="title">Singapore is an advantage</h2></div>
-    <p class="lead reveal">Not a handicap to apologize for — a structural edge. These communities are global and
-      digital-native, so location is irrelevant to <i>demand</i>; meanwhile SG hands you a <b>lower cost base</b> (the
-      §09 path to profitability), a <b>timezone lock with Japan</b> — the biggest avatar market on earth — and
-      working payment rails. Same revenue, more of it kept, closer to the customer.</p>
-
-    <div class="split reveal">
-      <div class="listcard do card">
-        <h4><span class="badge good">Lean in</span></h4>
-        <ul>
-          <li><b>Cost base → profitability</b> — a ~$400k SG team turns Year-3 revenue into a <b>~25&ndash;30% operating margin</b> where a Valley team would be burning (§09).</li>
-          <li><b>Japan timezone overlap</b> — the largest avatar/VTuber market, in your working hours.</li>
-          <li><b>Price edge</b> — a lean team can undercut booked-out Western riggers on the unloved rigging step and still net high margin.</li>
-          <li><b>Local design partners</b> — IMDA PIXEL, Gamescom Asia, and NUS / NTU / SMU game-dev clubs.</li>
-          <li><b>Global rails</b> — Gumroad, BOOTH, Patreon, itch.io all pay out to SG.</li>
-        </ul>
-      </div>
-      <div class="listcard dont card">
-        <h4><span class="badge trap">Avoid</span></h4>
-        <ul>
-          <li><b>Film &amp; AAA</b> — cinematic polish is exactly what we don't have.</li>
-          <li><b>Scientific / medical viz</b> — accuracy bar kills &ldquo;good-enough.&rdquo;</li>
-          <li><b>Enterprise sales</b> — slow cycles a student team can't fund.</li>
-          <li><b>Static ecommerce 3D</b> — doesn't touch our rigging edge; crowded &amp; funded.</li>
-        </ul>
-      </div>
-    </div>
+    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:12px">P($10M+) ≈ 25&ndash;30% with an exceptional team; expected value ~$2&ndash;3M. $10M is the right tail you architect toward — by building Year 1 around data + brand + a self-serve v1, not just services revenue.</p>
   </div>
 </section>
 
 <!-- FIRST 100 DAYS -->
 <section id="plan100">
   <div class="wrap">
-    <span class="eyebrow reveal">13 · The plan · 100 days</span>
-    <div class="sec-head reveal"><h2 class="title">What the first 100 days look like</h2></div>
-    <p class="lead reveal">Three milestones — <b>a working product, real revenue, and capital in the bank</b> — run as
-      <b>parallel workstreams from Day 1</b>, not in sequence. The build earns the traction; the traction earns the
-      raise; but you start all three on Monday. Below: the day-phased sub-milestones and the exact signals that say
-      &ldquo;on track&rdquo; vs &ldquo;stop and fix.&rdquo;</p>
+    <span class="eyebrow good reveal">08 · The first 100 days</span>
+    <div class="sec-head reveal"><h2 class="title">Build, traction, capital — in parallel, proven in sequence</h2></div>
+    <p class="lead reveal">Three workstreams from Day 1; the build earns the traction, the traction earns the raise. Don't
+      open the round until product and first dollars are real.</p>
 
-    <!-- day-gate strip -->
     <div class="funnel reveal" style="margin-top:24px">
-      <div class="fstep"><div class="n">DAY 0&ndash;20 · LOCK</div><div class="t">Bar &amp; cost locked</div><div class="d">Quality bar defined; GPU-cost/asset measured; partners recruited; raise prep quietly underway.</div></div>
-      <div class="fstep"><div class="n">DAY 20&ndash;50 · SHIP</div><div class="t">Self-serve + first $</div><div class="d">A stranger gets one real asset out; token Patreon live; first paying customers; investors warmed.</div></div>
-      <div class="fstep"><div class="n">DAY 50&ndash;80 · SCALE</div><div class="t">100 paying / 1 pilot</div><div class="d">Double down on what converts; lighthouse B2B conversation; round opens off real traction.</div></div>
-      <div class="fstep"><div class="n">DAY 80&ndash;100 · PROVE</div><div class="t">Retention + close</div><div class="d">Repeat + referral proven; demo-grade pipeline; seed closed or YC in.</div></div>
+      <div class="fstep"><div class="n">DAY 0&ndash;20 · LOCK</div><div class="t">Bar &amp; cost locked</div><div class="d">Quality bar defined; GPU-cost/asset measured; partners recruited; raise prep quiet.</div></div>
+      <div class="fstep"><div class="n">DAY 20&ndash;50 · SHIP</div><div class="t">Self-serve + first $</div><div class="d">A stranger gets one real asset out; token Patreon live; first paying customers.</div></div>
+      <div class="fstep"><div class="n">DAY 50&ndash;80 · SCALE</div><div class="t">100 paying / 1 pilot</div><div class="d">Double down on what converts; lighthouse B2B conversation; round opens on traction.</div></div>
+      <div class="fstep"><div class="n">DAY 80&ndash;100 · PROVE</div><div class="t">Retention + close</div><div class="d">Repeat + referral; demo-grade pipeline; seed closed or YC in.</div></div>
     </div>
 
-    <!-- MILESTONE 01 · BUILD -->
     <div class="bh reveal" style="margin-top:26px">
-      <div class="bh-head"><span class="bn">M01</span><h3>The build — robust pipeline, platform &amp; product</h3><span class="badge primary">Product</span></div>
-      <p class="who"><b>Goal:</b> turn today's working alpha into a robust, end-to-end pipeline a <b>non-pro can run
-        themselves</b> — the generation core, the platform around it, and a real product, not a research demo. Map to the
-        capability ladder (§11): harden Rung 0&ndash;1, prototype Rung 2 only if traction pulls.</p>
+      <div class="bh-head"><span class="bn">M01</span><h3>The build — robust pipeline &amp; product</h3><span class="badge primary">Product</span></div>
+      <p class="who"><b>Goal:</b> alpha → a robust, end-to-end pipeline a <b>non-pro runs unaided</b>. Harden Rung 0&ndash;1; instrument the data flywheel from day one.</p>
       <div class="bh-grid">
-        <div class="bblock" style="grid-column:1/-1">
-          <div class="h">Sub-milestones (by day)</div>
-          <ul>
-            <li><b>D1&ndash;20 · Harden the core:</b> lock the accept-quality bar with reference assets; <b>measure GPU-seconds/asset</b> (the §04 unknown); kill the top failure modes on diverse topology; instrument the <b>input→output data flywheel</b> from day one.</li>
-            <li><b>D20&ndash;50 · Productize to self-serve:</b> wrap the pipeline in an interface a stranger uses unaided — token batch at <b>≥30/day</b>, avatar rigs hitting the <b>VRC-ready spec</b> (Humanoid + 15 visemes + dynamic bones).</li>
-            <li><b>D50&ndash;80 · Reliability + next rung:</b> survive a public Discord drop (queue, retries, error handling); drive per-asset cleanup time down toward the margin target; prototype <b>text→4D</b> only if §06 signals justify it.</li>
-            <li><b>D80&ndash;100 · Demo-grade:</b> a reproducible <b>&lt;2-min live demo</b> (upload/sketch → animated asset) + a metrics dashboard (rig-success by topology, cost-to-serve, throughput) for the data room.</li>
-          </ul>
-        </div>
-        <div class="bblock dd">
-          <div class="h">Validation signals</div>
-          <ul>
-            <li><b>Rig-success rate ≥ bar</b> and climbing per topology class.</li>
-            <li><b>Cost-to-serve ≤ ~$2&ndash;3/asset</b> — the margin thesis holds.</li>
-            <li>A <b>non-pro completes the flow unaided</b> (activation without hand-holding).</li>
-            <li>Per-asset cleanup time <b>trending down</b> — automation (the flywheel) is real.</li>
-          </ul>
-        </div>
-        <div class="bblock fold">
-          <div class="h">Anti-signals (stop &amp; fix)</div>
-          <ul>
-            <li>Every output needs a <b>manual re-rig</b> — no real automation.</li>
-            <li>Cost-to-serve <b>2&ndash;3&times; the assumption</b> — margin breaks.</li>
-            <li>Reliability <b>collapses</b> under the first public drop.</li>
-          </ul>
-        </div>
+        <div class="bblock dd"><div class="h">Validation signals</div><ul><li>Rig-success ≥ bar, climbing per topology.</li><li><b>Cost-to-serve ≤ ~$2&ndash;3/asset</b> — margin holds.</li><li>Non-pro activates <b>without hand-holding</b>.</li><li>Cleanup time per asset trending down.</li></ul></div>
+        <div class="bblock fold"><div class="h">Anti-signals</div><ul><li>Every output needs a manual re-rig.</li><li>Cost-to-serve 2&ndash;3&times; the assumption.</li><li>Reliability collapses on the first public drop.</li></ul></div>
       </div>
     </div>
 
-    <!-- MILESTONE 02 · TRACTION -->
     <div class="bh reveal">
       <div class="bh-head"><span class="bn">M02</span><h3>Traction — first paying customers</h3><span class="badge good">Revenue</span></div>
-      <p class="who"><b>Goal:</b> <b>100 paying customers</b> on the self-serve product, <b>or one mid-market / platform
-        customer signed</b> — real revenue and real usage, not a waitlist. This is the §06 test, executed: tokens for
-        cash, avatars for the bet.</p>
+      <p class="who"><b>Goal:</b> <b>100 paying customers</b> (token subs + avatar buyers) <b>or one platform pilot signed</b> — real revenue, not a waitlist. Tokens for cash, avatars for the bet.</p>
       <div class="bh-grid">
-        <div class="bblock" style="grid-column:1/-1">
-          <div class="h">Sub-milestones (by day)</div>
-          <ul>
-            <li><b>D1&ndash;20 · Set up &amp; recruit:</b> stand up the token Patreon + Foundry/Discord presence; line up <b>5 token creators + 30 avatar riggers/buyers</b>; instrument the funnel.</li>
-            <li><b>D20&ndash;50 · Tokens push, avatars probe:</b> free 10-token drop → gate the rest behind Patreon; run the avatar positioning A/B (artist margin-expander vs. finished avatar). Target: <b>first dollar by ~D30</b>, <b>$300&ndash;500 MRR</b> by D50.</li>
-            <li><b>D50&ndash;80 · Scale what converts:</b> double down on the winning line toward <b>100 paying customers</b>; open <b>one lighthouse B2B2C / platform</b> conversation (a signed pilot or LOI counts as the alt-milestone).</li>
-            <li><b>D80&ndash;100 · Prove it sticks:</b> demonstrate <b>repeat purchases, MRR holding, and community referral</b>; package the cohort + MRR curve for the raise.</li>
-          </ul>
-        </div>
-        <div class="bblock dd">
-          <div class="h">Validation signals</div>
-          <ul>
-            <li><b>First dollar within 30 days</b>; MRR compounding.</li>
-            <li><b>≥100 paying</b> customers <i>or</i> one signed platform pilot.</li>
-            <li><b>Repeat + organic referral</b> in tight communities; <b>CAC ≈ free</b>.</li>
-            <li>A creator <b>switches their pipeline</b> to you / an artist routes <b>paid client work</b> through you.</li>
-          </ul>
-        </div>
-        <div class="bblock fold">
-          <div class="h">Anti-signals (stop &amp; fix)</div>
-          <ul>
-            <li>Lots of free trial, <b>no payment</b> — interest ≠ willingness to pay.</li>
-            <li>Activation <b>only with hand-holding</b>.</li>
-            <li><b>One-and-done</b> — no repeat, no referral.</li>
-          </ul>
-        </div>
+        <div class="bblock dd"><div class="h">Validation signals</div><ul><li><b>First dollar within 30 days</b>; MRR compounding.</li><li>≥100 paying <i>or</i> one signed pilot.</li><li>Repeat + organic referral; <b>CAC ≈ free</b>.</li><li>A creator switches their pipeline to you.</li></ul></div>
+        <div class="bblock fold"><div class="h">Anti-signals</div><ul><li>Free trial, no payment — interest ≠ WTP.</li><li>Activation only with hand-holding.</li><li>One-and-done — no repeat, no referral.</li></ul></div>
       </div>
     </div>
 
-    <!-- MILESTONE 03 · CAPITAL -->
     <div class="bh reveal">
       <div class="bh-head"><span class="bn">M03</span><h3>Capital — raise the seed</h3><span class="badge parallel">Fundraise</span></div>
-      <p class="who"><b>Goal:</b> close a seed — into a top-tier incubator (<b>Y Combinator</b>) or from a top-tier VC —
-        walking in with <b>product and traction, not slides</b>. Run relationship-building from Day 1; only <i>open the
-        round</i> once M01 + M02 signals are real.</p>
+      <p class="who"><b>Goal:</b> close a seed — YC or top-tier VC — walking in with <b>product and traction, not slides</b>. Build relationships from Day 1; open the round only when M01 + M02 signals are real.</p>
       <div class="bh-grid">
-        <div class="bblock" style="grid-column:1/-1">
-          <div class="h">Sub-milestones (by day)</div>
-          <ul>
-            <li><b>D1&ndash;20 · Prep quietly:</b> clean cap table + incorporation; craft the narrative (wedge→arc, §10&ndash;11); build the data-room skeleton; target list (YC batch deadline + 15&ndash;20 aligned seed funds).</li>
-            <li><b>D20&ndash;50 · Warm the network:</b> start <b>non-ask</b> investor conversations (advice, not money); apply to YC if batch timing fits; source intros via <b>NUS/NTU/SMU, IMDA, angels</b>.</li>
-            <li><b>D50&ndash;80 · Run a tight process:</b> once traction is real, open a <b>2&ndash;3 week</b> round; create urgency; lead with the <b>live demo + traction</b>, not the deck; YC interview prep.</li>
-            <li><b>D80&ndash;100 · Close:</b> term sheet → close, or YC acceptance. <b>Capital in the bank.</b></li>
-          </ul>
-        </div>
-        <div class="bblock dd">
-          <div class="h">Validation signals</div>
-          <ul>
-            <li>Multiple investor <b>second-meetings off the demo + traction</b> (not the deck).</li>
-            <li>A <b>term sheet</b>, YC interview, or YC acceptance.</li>
-            <li><b>Inbound</b> from investors after a public traction moment.</li>
-          </ul>
-        </div>
-        <div class="bblock fold">
-          <div class="h">Anti-signals (stop &amp; fix)</div>
-          <ul>
-            <li>Interest in the <b>vision but not the traction</b> — means traction isn't real yet; fix M02 before raising.</li>
-            <li>Process <b>drags &gt;6 weeks</b> with no second meetings — story or traction gap.</li>
-            <li>You're <b>pitching slides, not showing the product</b>.</li>
-          </ul>
-        </div>
+        <div class="bblock dd"><div class="h">Validation signals</div><ul><li>Investor second-meetings off the <b>demo + traction</b>.</li><li>A term sheet, YC interview, or acceptance.</li><li>Inbound after a public traction moment.</li></ul></div>
+        <div class="bblock fold"><div class="h">Anti-signals</div><ul><li>Interest in the vision but not the traction.</li><li>Process drags &gt;6 weeks, no second meetings.</li><li>You're pitching slides, not showing product.</li></ul></div>
       </div>
     </div>
 
-    <div class="callout reveal">
+    <div class="callout accent reveal">
       <div class="h">Definition of success at Day 100</div>
-      <p>All three, together: a <b>robust self-serve product</b> a stranger runs unaided at proven unit economics; <b>100
-        paying customers or one signed pilot</b> with repeat + referral; and a <b>seed closed</b> (YC or top-tier VC) off
-        demo + traction. Miss the build and traction is hollow; miss the traction and the raise is just a deck. The
-        discipline (§11): <b>parallel workstreams, sequential proof</b> — don't open the round until the product and the
-        first dollars are real.</p>
+      <p>All three: a <b>robust self-serve product</b> at proven unit economics; <b>100 paying or one signed pilot</b> with
+        repeat + referral; a <b>seed closed</b> off demo + traction. Miss the build and traction is hollow; miss the
+        traction and the raise is a deck.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RISKS / WHAT MUST BE TRUE -->
+<section id="risks">
+  <div class="wrap">
+    <span class="eyebrow warm reveal">09 · What must be true</span>
+    <div class="sec-head reveal"><h2 class="title">The honest gates — and what de-risks each</h2></div>
+    <div class="grid-2 reveal" style="margin-top:24px">
+      <div class="card"><h4 style="font-size:1.04rem;margin-bottom:8px">1 · Motion clears the &ldquo;usable&rdquo; bar</h4><p class="muted" style="font-size:.9rem;font-weight:300">Rigging is solid; believable looped motion is the hard rung and the 4D path is still heavy. <b style="color:var(--ink)">De-risk:</b> sell rig + idle loop now (tokens), scope motion to idle until robust locomotion exists.</p></div>
+      <div class="card"><h4 style="font-size:1.04rem;margin-bottom:8px">2 · The data flywheel actually compounds</h4><p class="muted" style="font-size:.9rem;font-weight:300">The moat only forms if every job improves the model. <b style="color:var(--ink)">De-risk:</b> instrument input→output capture from Day 1; measure whether cleanup time falls per cohort.</p></div>
+      <div class="card"><h4 style="font-size:1.04rem;margin-bottom:8px">3 · One lighthouse platform deal lands</h4><p class="muted" style="font-size:.9rem;font-weight:300">L2 is the leverage; it needs a marquee logo by Year 2. <b style="color:var(--ink)">De-risk:</b> start B2B2C conversations during the wedge; a signed pilot counts.</p></div>
+      <div class="card"><h4 style="font-size:1.04rem;margin-bottom:8px">4 · Unit economics hold at scale</h4><p class="muted" style="font-size:.9rem;font-weight:300">At 1M+ users, GPU COGS scales. <b style="color:var(--ink)">De-risk:</b> measure GPU-seconds/asset in week 0; keep per-asset cost in cents or the margin erodes.</p></div>
+      <div class="card"><h4 style="font-size:1.04rem;margin-bottom:8px">5 · Focus survives the ambition</h4><p class="muted" style="font-size:.9rem;font-weight:300">&ldquo;Whatever it takes&rdquo; is where focus dies. <b style="color:var(--ink)">De-risk:</b> climb the ladder in order — one paid push at a time; gates before funding the next level.</p></div>
+      <div class="card" style="border-color:rgba(124,196,255,.25)"><h4 style="font-size:1.04rem;margin-bottom:8px">Why-now</h4><p class="muted" style="font-size:.9rem;font-weight:300">Generation got solved, moving the bottleneck to motion, while six markets demand it at once. The window is the gap between &ldquo;anyone can make a mesh&rdquo; and &ldquo;someone can animate them all.&rdquo; It won't stay open.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US / SG -->
+<section id="team">
+  <div class="wrap">
+    <span class="eyebrow reveal">10 · Why us</span>
+    <div class="sec-head reveal"><h2 class="title">An exceptional team, a cost-base edge, a global market</h2></div>
+    <div class="split reveal">
+      <div class="listcard do card">
+        <h4><span class="badge good">Built to win this</span></h4>
+        <ul>
+          <li><b>Depth where it's hardest</b> — the non-human / arbitrary-topology motion problem is the team's core.</li>
+          <li><b>Ship-before-perfect DNA</b> — productizing the just-now-possible is the whole strategy.</li>
+          <li><b>Singapore cost base</b> — Year-3 revenue converts to ~25&ndash;30% operating margin where a Valley team burns; optionality to stay lean <i>or</i> raise and run hot.</li>
+          <li><b>Japan-timezone &amp; global rails</b> — closest to the biggest avatar market; payments work worldwide; IMDA / Gamescom Asia / NUS-NTU-SMU for partners.</li>
+        </ul>
+      </div>
+      <div class="listcard dont card">
+        <h4><span class="badge trap">Where we won't play</span></h4>
+        <ul>
+          <li><b>Static generation</b> — commoditizing; not our right to win.</li>
+          <li><b>Film &amp; AAA</b> — cinematic polish is the opposite of our edge.</li>
+          <li><b>Scientific / medical viz</b> — accuracy bar kills good-enough.</li>
+          <li><b>Slow enterprise-first sales</b> — until L2, when the product pulls it.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout accent reveal">
+      <div class="h">The whole strategy in one breath</div>
+      <p><b>Productize the just-now-possible motion layer; win the jank-tolerant wedge for cash, data, and distribution;
+        climb to horizontal self-serve and platform infrastructure; and use the scarce 4D-motion data to create the
+        markets that don't exist yet.</b> Top-down it's the motion layer of the 3D economy; bottom-up it starts Monday
+        with a token and an avatar.</p>
     </div>
   </div>
 </section>
@@ -1187,17 +596,17 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
   <div class="wrap" style="padding-bottom:18px">
     <div class="h" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Sources · pressure-test data (June 2026)</div>
     <div class="refs" style="border:0;padding:0;margin:0">
-      <a href="https://www.patreon.com/beneostokens" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">Beneos Patreon (2,333 members)</a>
-      <a href="https://opentools.ai/tools/anything-world" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">Anything World ($50/mo, uploads animals)</a>
-      <a href="https://app.anything.world/animation-rigging" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">AW limits: no faces/clothing/props</a>
-      <a href="https://vtubermodels.com/how-much-do-vtuber-models-cost/" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">3D VTuber model $1.3k&ndash;10k</a>
-      <a href="https://vtubergame.com/blog/vtuber-rigging-model-pricing" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">Rig fee $500&ndash;2,000</a>
+      <a href="https://www.patreon.com/beneostokens" target="_blank" rel="noopener">Beneos Patreon (2,333 members)</a>
+      <a href="https://opentools.ai/tools/anything-world" target="_blank" rel="noopener">Anything World ($50/mo, uploads animals)</a>
+      <a href="https://app.anything.world/animation-rigging" target="_blank" rel="noopener">AW limits: no faces/clothing/props</a>
+      <a href="https://vtubermodels.com/how-much-do-vtuber-models-cost/" target="_blank" rel="noopener">3D VTuber model $1.3k&ndash;10k</a>
+      <a href="https://vtubergame.com/blog/vtuber-rigging-model-pricing" target="_blank" rel="noopener">Rig fee $500&ndash;2,000</a>
     </div>
   </div>
   <div class="foot-in">
-    <div class="t">Temporial · Beachhead GTM &amp; test plan — non-human rigging as the wedge. Internal strategy, v2 (pressure-tested; furry parked).</div>
+    <div class="t">Temporial · The motion layer of the 3D economy — first-principles strategy, v3. Top-down model, bottom-up plan.</div>
     <div class="refs" style="border:0;padding:0;margin:0">
-      <span>lead: avatars · run-first: tokens</span><span>north-star: rig success rate</span>
+      <span>moat: hardest layer + 4D data</span><span>wedge → horizontal → infra → new markets</span>
     </div>
   </div>
 </footer>
