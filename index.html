@@ -234,33 +234,35 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
     <span class="eyebrow reveal">01 · The wedge</span>
     <div class="sec-head reveal"><h2 class="title">Non-human topology is the beachhead, not the moat</h2></div>
     <p class="lead reveal">It's our <b>way in</b> — an underserved, jank-tolerant, already-paying pocket of demand the
-      humanoid-rig field can't touch. We win here first because buyers value <b>speed, volume, and emotion</b> over
-      film-grade fidelity. But the wedge is <i>copyable</i> — Meshy or Anything World could bolt on non-human rigging.
-      The moat has to be <b>built</b>, and only three candidates are real: <b>workflow lock-in</b> (our plugin embedded
-      in pipelines), <b>community distribution</b> (brand + trust in 2&ndash;3 niches), and <b>coverage data</b> from the
-      long tail of weird meshes users send us. If none of those is forming, we're a feature, not a company.</p>
+      humanoid-rig field can't touch. We win here because buyers value <b>speed, volume, and emotion</b> over
+      film-grade fidelity. The honest version: it's <i>not</i> &ldquo;we rig animals, they don't&rdquo; — <b>Anything World
+      already rigs uploaded animals for $50/mo</b>. The wedge is the <b>avatar essentials it skips</b> (faces, clothing,
+      props — see right) plus owning the creator channels. It's still copyable, so the moat has to be <b>built</b>:
+      <b>workflow lock-in</b>, <b>community distribution</b>, or <b>coverage data</b> from the long tail of weird meshes.
+      If none of those is forming, we're a feature, not a company.</p>
 
     <div class="moat">
       <div class="card reveal">
-        <h3>Why incumbents leave this open</h3>
+        <h3>The competitive map, corrected</h3>
         <div class="vs-row"><div class="who">Mixamo</div><div class="gap">Humanoid-only. <b>Zero</b> coverage of animals, birds, or objects.</div></div>
         <div class="vs-row"><div class="who">Meshy / Tripo</div><div class="gap">Generation-first; their auto-rig <b>assumes a biped skeleton</b> and breaks on non-human topology.</div></div>
-        <div class="vs-row"><div class="who">Anything World</div><div class="gap">The one real animal competitor — but <b>library-driven</b>. It maps to pre-built creatures, not your arbitrary mesh.</div></div>
+        <div class="vs-row"><div class="who">Anything&nbsp;World</div><div class="gap"><b>The real threat — it already rigs your uploaded animals</b> ($50/mo). But it <b>decimates high-poly</b> and skips <b>facial blendshapes, layered clothing/submeshes, and props</b> — the exact avatar essentials. <span style="color:var(--good)">That gap is our wedge.</span></div></div>
         <div class="vs-row"><div class="who">CSM / Kaedim / Zakeke</div><div class="gap">Funded gold-rush on <i>generation</i> and static commerce. Not in the rigging-the-weird-mesh lane.</div></div>
       </div>
       <div class="card reveal">
-        <h3>So our entry claim is narrow and sharp</h3>
-        <p class="muted" style="font-weight:300;margin-bottom:14px">&ldquo;Send us <b style="color:var(--ink)">any</b> non-human mesh — a wolf, a crow, a teapot — and get back a rigged, animated, good-enough asset in minutes, not a week of weight-painting.&rdquo;</p>
+        <h3>So our entry claim is the gap, not the species</h3>
+        <p class="muted" style="font-weight:300;margin-bottom:14px">&ldquo;Send us a creature mesh and get back a rig with the things the auto-riggers skip — a <b style="color:var(--ink)">face, dynamic clothing, props, and an idle loop</b> — VTuber/VRChat-ready, not decimated.&rdquo;</p>
         <div class="chips">
-          <span class="chip">arbitrary topology, not a library</span>
-          <span class="chip">good-enough &gt; cinematic</span>
-          <span class="chip">speed / volume / emotion buyers</span>
-          <span class="chip">global · digital-native · already paying</span>
+          <span class="chip">faces + clothing + props, not just bones</span>
+          <span class="chip">no high-poly decimation</span>
+          <span class="chip">built for avatars &amp; tokens, not generic AR</span>
+          <span class="chip">we own the creator channels</span>
         </div>
         <div class="callout" style="margin-top:18px">
           <div class="h">The one thing to keep proving</div>
-          <p>Everything below rests on one fact: that we can rig <b>topologically diverse</b> meshes at an
-            accept-quality bar. If that breaks, no channel saves us — see <a class="inline" href="#metrics">§04</a>.</p>
+          <p>Everything rests on one fact: that we clear the <b>avatar-essentials bar</b> (rig + face + clothing/props)
+            on diverse meshes where Anything World stops at bare bones. If we can't, we're not differentiated — see
+            <a class="inline" href="#risks">§07</a>.</p>
         </div>
       </div>
     </div>
@@ -285,7 +287,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
             <td>Token/mini creators (Patreon); Foundry/Roll20 GMs</td>
             <td>~100% non-human; need = one 4-sec idle loop; proven paid market; lowest quality bar</td>
             <td><span class="badge good">Run first · cash</span></td></tr>
-          <tr><td><b>Non-human avatars</b><br><span class="dim" style="font-size:.8rem">VRChat · VTuber · furry</span></td>
+          <tr><td><b>Non-human avatars</b><br><span class="dim" style="font-size:.8rem">VRChat · VTuber (furry parked)</span></td>
             <td>Commission artists <i>or</i> priced-out end-users (TBD — see §07)</td>
             <td>Densest pool of non-human-3D demand; jank-tolerant; highest $/customer</td>
             <td><span class="badge primary">Lead bet</span></td></tr>
@@ -328,40 +330,41 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
     <!-- B1 -->
     <div class="bh lead-bh reveal">
-      <div class="bh-head"><span class="bn">B1</span><h3>Non-human avatars — VRChat / VTuber / furry</h3><span class="badge primary">Lead bet · 2nd in sequence</span></div>
-      <p class="who"><b>The prize, but the buyer is unresolved.</b> Rigging and weight-painting is the slowest, most
-        unloved part of a non-human commission. The open question (§07): do we sell that to <b>artists</b> as a
-        margin-expander, or sell <b>finished avatars</b> to end-users priced out of a $300&ndash;1,500 commission?
-        Test both before scaling. <b>&ldquo;VRC-ready&rdquo; is concrete:</b> Unity-Humanoid-mapped armature, 15 visemes,
-        eye bones, and PhysBone-ready tail/ears — not a generic skeleton.</p>
+      <div class="bh-head"><span class="bn">B1</span><h3>Non-human avatars — VRChat / VTuber</h3><span class="badge primary">Lead bet · 2nd in sequence</span></div>
+      <p class="who"><b>The prize, but the buyer is unresolved.</b> Rigging is a <i>priced line item</i> here — Fiverr rigs
+        run <b>$25&ndash;60</b>, quality full-body-tracking rigs <b>$400&ndash;600</b>, and inside a premium 3D VTuber model
+        ($1,300&ndash;10,000) the rig fee alone is <b>$500&ndash;2,000</b> and takes weeks. The open question (§07): sell that
+        to <b>artists</b> as a margin-expander, or sell <b>finished avatars</b> to end-users priced out of a full
+        commission? Test both. <b>&ldquo;VRC-ready&rdquo; is concrete:</b> Unity-Humanoid armature, VRM export, 15 visemes,
+        eye bones, dynamic-bone-ready tail/ears. <span class="dim">(Furry/feral is parked for now — held option below.)</span></p>
       <div class="bh-grid">
         <div class="bblock">
           <div class="h">Where to find them</div>
           <div class="chips">
             <span class="chip">BOOTH</span><span class="chip">Gumroad</span><span class="chip">Jinxxy</span>
-            <span class="chip">VGen</span><span class="chip">FurAffinity</span><span class="chip">species / avatar Discords</span>
-            <span class="chip">VRChat creator X/Twitter</span>
+            <span class="chip">VGen</span><span class="chip">VTuber.gg</span><span class="chip">VRChat avatar Discords</span>
+            <span class="chip">VTuber X/Twitter</span>
           </div>
         </div>
         <div class="bblock">
           <div class="h">The test offer (run both)</div>
           <ul>
-            <li><b>A · Artists:</b> rig-as-a-service at <b>$40&ndash;80/rig</b> — &ldquo;same price to your client, 1 day not 4.&rdquo;</li>
-            <li><b>B · End-users:</b> finished feral/anthro avatar at <b>$80&ndash;150</b>, undercutting a full commission.</li>
+            <li><b>A · Artists:</b> rig-as-a-service at <b>$60&ndash;150/rig</b> — &ldquo;same price to your client, 1 day not 3 weeks.&rdquo;</li>
+            <li><b>B · End-users:</b> finished creature/character avatar at <b>$120&ndash;250</b>, undercutting a full commission.</li>
           </ul>
         </div>
         <div class="bblock">
           <div class="h">First 10 customers</div>
           <ul>
-            <li>DM 30 artists with open VGen/commission slots; offer to rig their next job free, then priced.</li>
-            <li>Post one feral rig turnaround in 2 species Discords; convert replies.</li>
+            <li>DM 30 riggers with open VGen/Fiverr slots; rig their next job free, then priced.</li>
+            <li>Post one creature-avatar rig turnaround in 2 VRChat avatar Discords; convert replies.</li>
           </ul>
         </div>
         <div class="bblock">
           <div class="h">Targets by week 6</div>
           <ul>
             <li>≥ <b>60%</b> pass the concrete VRC-ready bar on first pass.</li>
-            <li>≥ <b>10 paid</b> rigs/avatars at ≥ <b>$40</b> (whichever positioning wins).</li>
+            <li>≥ <b>10 paid</b> rigs/avatars at ≥ <b>$60</b> (whichever positioning wins).</li>
             <li>≥ <b>3</b> buyers return for a 2nd; ≥ <b>1</b> unprompted referral.</li>
           </ul>
         </div>
@@ -369,7 +372,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
           <div class="h">Signals to double down</div>
           <ul>
             <li>Artists quietly using it for <b>paid client work</b> (not just the free demo).</li>
-            <li>Organic mentions in species/avatar Discords; inbound from one posted demo.</li>
+            <li>Organic mentions in VRChat/VTuber avatar Discords; inbound from one posted demo.</li>
             <li>People asking for <b>more species / formats</b> — pull, not push.</li>
           </ul>
         </div>
@@ -378,7 +381,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
           <ul>
             <li>They love the demo but <b>won't send paid work</b>.</li>
             <li>Output needs a <b>full re-rig</b> every time.</li>
-            <li>Topology diversity (wings, tails, digitigrade legs) <b>breaks</b> it repeatedly.</li>
+            <li>The <b>face/clothing/props</b> step (our differentiator vs Anything World) needs constant hand-fixing.</li>
           </ul>
         </div>
       </div>
@@ -446,8 +449,10 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
       <div class="bh-head"><span class="bn">B3</span><h3>Tabletop VTT tokens &amp; minis</h3><span class="badge good">Run first · cash &amp; engine proof</span></div>
       <p class="who"><b>The easiest quality bar we'll face, and the fastest dollar.</b> Tokens are ~100% non-human and
         the need is one 4-sec idle loop — exactly what ships today, no locomotion required. Proven paid market
-        (Beneos-scale token Patreons run <b>$5&ndash;20k/mo</b>). Concrete deliverable: a looping <b>WebM / APNG token,
-        ~256&ndash;512px, top-down</b>, drag-drop into Foundry. Run this first to prove the engine and bank revenue.</p>
+        (Beneos' token Patreon has <b>2,333 members</b> — a ~$12&ndash;25k/mo ceiling). Concrete deliverable: a
+        <b>lightweight looping token, ~256&ndash;512px, top-down</b>, drag-drop into Foundry — keep files small (Beneos cut
+        filesize 92% in 2025 moving off heavy WebM to 2.5D; don't repeat their mistake). Run this first to prove the
+        engine and bank revenue.</p>
       <div class="bh-grid">
         <div class="bblock">
           <div class="h">Where to find them</div>
@@ -499,6 +504,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
     <!-- v2 held options -->
     <div class="grid-3 reveal">
+      <div class="card" style="border-color:rgba(240,196,120,.3)">
+        <div style="margin-bottom:10px"><span class="badge v2">Parked · revisit after B1</span></div>
+        <h4 style="font-size:1.08rem;margin-bottom:8px">Furry / feral avatars</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Deliberately <b style="color:var(--ink)">set aside for now</b> — it's the densest non-human pocket but a distinct community with its own norms, channels (FurAffinity, species Discords), and a heavier feral-topology bar. Prove the VRChat/VTuber wedge first, then re-open furry as the obvious expansion, not the entry point.</p>
+      </div>
       <div class="card">
         <div style="margin-bottom:10px"><span class="badge v2">v2 · breakout</span></div>
         <h4 style="font-size:1.08rem;margin-bottom:8px">Animated pet digital twin</h4>
@@ -523,41 +533,43 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
   <div class="wrap">
     <span class="eyebrow reveal">04 · Unit economics</span>
     <div class="sec-head reveal"><h2 class="title">Is a rig a business? The math, per beachhead</h2></div>
-    <p class="lead reveal">A wedge only matters if the unit economics work. Figures below are <b>working assumptions to
-      validate in weeks 0&ndash;2</b>, not gospel — but they're what ranks the beachheads. The pattern is clear:
-      compute-per-rig is cheap, so margin is high everywhere; the real variable is <b>price the market will bear</b> and
+    <p class="lead reveal">A wedge only matters if the unit economics work. The price columns below are now <b>anchored to
+      real June 2026 market data</b> (sources at foot); cost-to-serve is still the assumption to validate in week 0.
+      Compute-per-rig is cheap, so margin is high everywhere; the real variable is <b>price the market will bear</b> and
       <b>how fast you reach a paying customer</b>.</p>
 
     <div class="tbl-wrap reveal">
       <table>
-        <thead><tr><th>Beachhead</th><th>Market pays today</th><th>We charge</th><th>Cost to serve*</th><th>Path to first $1k MRR</th></tr></thead>
+        <thead><tr><th>Beachhead</th><th>Market pays today (sourced)</th><th>We charge</th><th>Cost to serve*</th><th>Path to first $1k MRR</th></tr></thead>
         <tbody>
           <tr><td><b>Tokens</b> <span class="badge good" style="margin-left:4px">first</span></td>
-            <td>Packs $5&ndash;15; top Patreons $5&ndash;20k/mo</td>
+            <td>Packs $5&ndash;15; Beneos Patreon <b>2,333 members</b> (~$12&ndash;25k/mo)</td>
             <td><span class="mono">$5&ndash;8/mo</span> Patreon, or 20&ndash;30% rev-share</td>
             <td>pennies / token</td>
             <td class="tgt">~150&ndash;200 subs <i>or</i> 1&ndash;2 creator deals</td></tr>
           <tr><td><b>Avatars</b> <span class="badge primary" style="margin-left:4px">lead</span></td>
-            <td>Anthro commission $300&ndash;1,500; rig step alone $80&ndash;300</td>
-            <td><span class="mono">$40&ndash;80</span>/rig or <span class="mono">$80&ndash;150</span>/avatar</td>
+            <td>3D VTuber model $1,300&ndash;10k; <b>rig fee alone $500&ndash;2,000</b>; budget rigs $25&ndash;600</td>
+            <td><span class="mono">$60&ndash;150</span>/rig or <span class="mono">$120&ndash;250</span>/avatar</td>
             <td>~$1&ndash;3 compute / rig</td>
-            <td class="tgt">~15&ndash;25 paid rigs / mo</td></tr>
+            <td class="tgt">~8&ndash;15 paid rigs / mo</td></tr>
           <tr><td><b>Game devs</b> <span class="badge parallel" style="margin-left:4px">funnel</span></td>
-            <td>Rig gigs $50&ndash;300; asset-store tools $20&ndash;60 once</td>
+            <td>Rig gigs $50&ndash;300; Anything World <b>$50/mo</b> is the price ceiling</td>
             <td>Free → <span class="mono">$15&ndash;25/mo</span> commercial seat</td>
             <td>compute / rig</td>
             <td class="tgt">~50&ndash;70 pro seats (hard — it's a funnel)</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">*Cost-to-serve is the single biggest assumption to nail in week 0 — measure real GPU-seconds per rig before trusting any margin here.</p>
+    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">*Cost-to-serve is the single biggest unvalidated number — measure real GPU-seconds per rig in week 0 before trusting any margin here.</p>
 
     <div class="callout reveal">
-      <div class="h">What the math says to do</div>
-      <p><b>Cheapest dollar = tokens</b> (run first; it funds everything). <b>Biggest dollar per customer = avatars</b>
-        (the lead bet, once positioning is settled). <b>Game devs are distribution, not revenue</b> — never let plugin
-        installs masquerade as traction. If avatar compute-per-rig comes in above ~$5, the $40 price still works; if
-        token quality needs heavy per-token cleanup, the cheap-dollar thesis breaks — that's the number to watch.</p>
+      <div class="h">What the data changed</div>
+      <p>The pressure test <b>raised</b> the avatar numbers: rigging is a real priced line item ($500&ndash;2,000 inside a
+        premium VTuber model), so we under-charged at $40 — corrected to <b>$60&ndash;150/rig</b>. Fewer, pricier rigs hit
+        $1k MRR faster. <b>Tokens validated</b> (Beneos' 2,333 members confirms a $12&ndash;25k/mo ceiling). The one
+        caution: Beneos <i>moved off animated WebM to lighter 2.5D tokens in 2025</i> to cut filesize 92% — so our token
+        deliverable should target <b>lightweight loops</b>, not heavy video. <b>Anything World's $50/mo caps</b> what game
+        devs will pay for a rig tool — which is why B2 is a funnel, not a revenue line.</p>
     </div>
   </div>
 </section>
@@ -665,9 +677,9 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
           <b style="color:var(--ink)">De-risk:</b> A/B two B1 positionings in weeks 1&ndash;4 — artist margin-expander vs. direct-to-end-user. Whichever pulls <i>is</i> the real B1; if neither does, B1 isn't ready and tokens carry the quarter.</p>
       </div>
       <div class="card">
-        <h4 style="font-size:1.05rem;margin-bottom:8px">2 · VRChat is mostly <span style="color:var(--warm)">humanoid</span> under the fur</h4>
-        <p class="muted" style="font-size:.9rem;font-weight:300">Anthro avatars ride a Unity-Humanoid armature; pure feral quadrupeds are a smaller niche.
-          <b style="color:var(--ink)">De-risk:</b> Measure success against the concrete VRC-ready bar (Humanoid map + visemes + PhysBones), and decide early whether we're chasing the feral niche or the anthro mainstream.</p>
+        <h4 style="font-size:1.05rem;margin-bottom:8px">2 · &ldquo;Non-human&rdquo; avatars are mostly <span style="color:var(--warm)">humanoid</span> rigs</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Most VRChat/VTuber creature avatars ride a Unity-Humanoid armature with visemes &amp; dynamic bones — the differentiator is the <i>face + clothing + props</i>, not an exotic skeleton (which is also why furry/feral is parked).
+          <b style="color:var(--ink)">De-risk:</b> Measure against the concrete VRC-ready bar (Humanoid map + 15 visemes + dynamic-bone tail/ears), exactly where Anything World stops.</p>
       </div>
       <div class="card">
         <h4 style="font-size:1.05rem;margin-bottom:8px">3 · &ldquo;Motion in minutes&rdquo; <span style="color:var(--warm)">outruns the tech</span></h4>
@@ -773,10 +785,20 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 </section>
 
 <footer>
-  <div class="foot-in">
-    <div class="t">Temporial · Beachhead GTM &amp; test plan — non-human rigging as the wedge. Internal strategy, v1.</div>
+  <div class="wrap" style="padding-bottom:18px">
+    <div class="h" style="font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px">Sources · pressure-test data (June 2026)</div>
     <div class="refs" style="border:0;padding:0;margin:0">
-      <span>wedge: non-human topology</span><span>3 beachheads</span><span>north-star: rig success rate</span>
+      <a href="https://www.patreon.com/beneostokens" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">Beneos Patreon (2,333 members)</a>
+      <a href="https://opentools.ai/tools/anything-world" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">Anything World ($50/mo, uploads animals)</a>
+      <a href="https://app.anything.world/animation-rigging" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">AW limits: no faces/clothing/props</a>
+      <a href="https://vtubermodels.com/how-much-do-vtuber-models-cost/" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">3D VTuber model $1.3k&ndash;10k</a>
+      <a href="https://vtubergame.com/blog/vtuber-rigging-model-pricing" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.72rem;color:var(--ink-2);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;text-decoration:none">Rig fee $500&ndash;2,000</a>
+    </div>
+  </div>
+  <div class="foot-in">
+    <div class="t">Temporial · Beachhead GTM &amp; test plan — non-human rigging as the wedge. Internal strategy, v2 (pressure-tested; furry parked).</div>
+    <div class="refs" style="border:0;padding:0;margin:0">
+      <span>lead: avatars · run-first: tokens</span><span>north-star: rig success rate</span>
     </div>
   </div>
 </footer>
