@@ -203,8 +203,9 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
     <div class="nav-links">
       <a href="#edge">The wedge</a>
       <a href="#portfolio">Beachheads</a>
-      <a href="#metrics">Metrics</a>
+      <a href="#econ">Economics</a>
       <a href="#plan">Test plan</a>
+      <a href="#risks">Hard truths</a>
       <a href="#gate">Decision gate</a>
       <a href="#sg">Singapore</a>
     </div>
@@ -217,11 +218,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
     <span class="eyebrow reveal">Beachhead strategy · v1 test plan</span>
     <h1 class="reveal">Sell the rig nobody else can do — <span class="grad">to people already paying for it</span>.</h1>
     <p class="lead reveal">Everyone can auto-rig a biped. Our edge is everything that <i>isn't</i> one — quadrupeds, birds,
-      fish, insects, props — plus a good-enough motion loop in minutes. This is the plan for which beachheads to
+      fish, insects, props — plus a clean rig and an idle loop, fast. This is the plan for which beachheads to
       test, what to measure, and the exact signals that say <b>double down</b> or <b>fold</b>.</p>
     <div class="pills reveal">
-      <span class="pill"><b>3</b> beachheads tested in parallel</span>
-      <span class="pill"><b>8&ndash;12 wk</b> to a decision</span>
+      <span class="pill"><b>1</b> lead bet, sequenced — not 3 at once</span>
+      <span class="pill"><b>$1k MRR</b> in ~12 wk is the bar</span>
       <span class="pill"><b>1</b> north-star: non-human rig success rate</span>
     </div>
   </div>
@@ -234,8 +235,10 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
     <div class="sec-head reveal"><h2 class="title">Non-human topology is the beachhead, not the moat</h2></div>
     <p class="lead reveal">It's our <b>way in</b> — an underserved, jank-tolerant, already-paying pocket of demand the
       humanoid-rig field can't touch. We win here first because buyers value <b>speed, volume, and emotion</b> over
-      film-grade fidelity. The durable moat is <i>earned on top</i> of this — breadth of topology coverage and the data
-      flywheel from every weird mesh we process — not handed to us by the wedge itself.</p>
+      film-grade fidelity. But the wedge is <i>copyable</i> — Meshy or Anything World could bolt on non-human rigging.
+      The moat has to be <b>built</b>, and only three candidates are real: <b>workflow lock-in</b> (our plugin embedded
+      in pipelines), <b>community distribution</b> (brand + trust in 2&ndash;3 niches), and <b>coverage data</b> from the
+      long tail of weird meshes users send us. If none of those is forming, we're a feature, not a company.</p>
 
     <div class="moat">
       <div class="card reveal">
@@ -268,26 +271,28 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 <section id="portfolio">
   <div class="wrap">
     <span class="eyebrow reveal">02 · The portfolio</span>
-    <div class="sec-head reveal"><h2 class="title">Three beachheads, one bet, a couple of held options</h2></div>
-    <p class="lead reveal">Run three in parallel because they share the same engine and creator channels. By the
-      end of the test window, concentrate on <b>one</b> and keep at most one running alongside it.</p>
+    <div class="sec-head reveal"><h2 class="title">Sequenced, not parallel — a three-person team can't run three GTMs</h2></div>
+    <p class="lead reveal">They share the same engine, so run <b>discovery</b> across all three. But run only <b>one paid
+      push at a time</b>, ordered by speed-to-cash: <b>tokens first</b> (cheapest dollar, lowest quality bar, proves the
+      engine), then <b>avatars</b> (the prize, but it has positioning risk to resolve), with <b>game devs</b> as a
+      distribution funnel, not a revenue line.</p>
 
     <div class="tbl-wrap reveal">
       <table>
         <thead><tr><th>Beachhead</th><th>Who pays</th><th>Why it fits the wedge</th><th>Stance</th></tr></thead>
         <tbody>
-          <tr><td><b>Non-human avatars</b><br><span class="dim" style="font-size:.8rem">VRChat · VTuber · furry</span></td>
-            <td>Commission avatar artists (then end-creators)</td>
-            <td>Densest pool of non-human-3D demand; jank-tolerant; artists booked out for months</td>
-            <td><span class="badge primary">Primary</span></td></tr>
-          <tr><td><b>Indie game devs &amp; jammers</b></td>
-            <td>Solo / small studios; game-jam teams</td>
-            <td>Need creatures &amp; props Mixamo can't rig; love free tooling</td>
-            <td><span class="badge parallel">Parallel</span></td></tr>
           <tr><td><b>Tabletop VTT tokens &amp; minis</b></td>
             <td>Token/mini creators (Patreon); Foundry/Roll20 GMs</td>
-            <td>~100% non-human; animation = a 4-sec idle loop; proven paid market</td>
-            <td><span class="badge parallel">Parallel</span></td></tr>
+            <td>~100% non-human; need = one 4-sec idle loop; proven paid market; lowest quality bar</td>
+            <td><span class="badge good">Run first · cash</span></td></tr>
+          <tr><td><b>Non-human avatars</b><br><span class="dim" style="font-size:.8rem">VRChat · VTuber · furry</span></td>
+            <td>Commission artists <i>or</i> priced-out end-users (TBD — see §07)</td>
+            <td>Densest pool of non-human-3D demand; jank-tolerant; highest $/customer</td>
+            <td><span class="badge primary">Lead bet</span></td></tr>
+          <tr><td><b>Indie game devs &amp; jammers</b></td>
+            <td>Solo / small studios; game-jam teams</td>
+            <td>Need creatures &amp; props Mixamo can't rig; free tool = distribution, not revenue</td>
+            <td><span class="badge parallel">Funnel · later</span></td></tr>
           <tr><td><b>Animated pet &ldquo;digital twin&rdquo;</b></td>
             <td>Consumers (pet owners)</td>
             <td>Literal pet angle; emotion-driven; differentiate from static-print incumbents</td>
@@ -323,10 +328,12 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
     <!-- B1 -->
     <div class="bh lead-bh reveal">
-      <div class="bh-head"><span class="bn">B1</span><h3>Non-human avatars — VRChat / VTuber / furry</h3><span class="badge primary">Primary</span></div>
-      <p class="who"><b>Sell to commission artists first.</b> They're booked out for months and the slowest, most
-        unloved part of a non-human commission is rigging and weight-painting. Offer to take that off their plate and
-        you're selling a painkiller, not a vitamin. End-creators are the second wave.</p>
+      <div class="bh-head"><span class="bn">B1</span><h3>Non-human avatars — VRChat / VTuber / furry</h3><span class="badge primary">Lead bet · 2nd in sequence</span></div>
+      <p class="who"><b>The prize, but the buyer is unresolved.</b> Rigging and weight-painting is the slowest, most
+        unloved part of a non-human commission. The open question (§07): do we sell that to <b>artists</b> as a
+        margin-expander, or sell <b>finished avatars</b> to end-users priced out of a $300&ndash;1,500 commission?
+        Test both before scaling. <b>&ldquo;VRC-ready&rdquo; is concrete:</b> Unity-Humanoid-mapped armature, 15 visemes,
+        eye bones, and PhysBone-ready tail/ears — not a generic skeleton.</p>
       <div class="bh-grid">
         <div class="bblock">
           <div class="h">Where to find them</div>
@@ -337,26 +344,25 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
           </div>
         </div>
         <div class="bblock">
-          <div class="h">The test offer</div>
+          <div class="h">The test offer (run both)</div>
           <ul>
-            <li>Rig-as-a-service: <b>&ldquo;send your model, get a VRC-ready rigged avatar (or clean base rig) back in hours.&rdquo;</b></li>
-            <li>10&ndash;20 design-partner artists; route <b>real client work</b> through it.</li>
+            <li><b>A · Artists:</b> rig-as-a-service at <b>$40&ndash;80/rig</b> — &ldquo;same price to your client, 1 day not 4.&rdquo;</li>
+            <li><b>B · End-users:</b> finished feral/anthro avatar at <b>$80&ndash;150</b>, undercutting a full commission.</li>
           </ul>
         </div>
         <div class="bblock">
-          <div class="h">Primary metrics</div>
+          <div class="h">First 10 customers</div>
           <ul>
-            <li><b>Rig acceptance rate</b> — output usable with ≤ minor cleanup.</li>
-            <li><b>WTP per rig</b> — actual paid, vs current commission rates.</li>
-            <li><b>30-day repeat rate</b> — artists coming back with new jobs.</li>
+            <li>DM 30 artists with open VGen/commission slots; offer to rig their next job free, then priced.</li>
+            <li>Post one feral rig turnaround in 2 species Discords; convert replies.</li>
           </ul>
         </div>
         <div class="bblock">
-          <div class="h">Targets to clear</div>
+          <div class="h">Targets by week 6</div>
           <ul>
-            <li>≥ <b>50%</b> rig acceptance on first pass.</li>
-            <li>≥ <b>20%</b> of partners route a second paid job in 30 days.</li>
-            <li>≥ <b>1</b> unprompted referral inside a community.</li>
+            <li>≥ <b>60%</b> pass the concrete VRC-ready bar on first pass.</li>
+            <li>≥ <b>10 paid</b> rigs/avatars at ≥ <b>$40</b> (whichever positioning wins).</li>
+            <li>≥ <b>3</b> buyers return for a 2nd; ≥ <b>1</b> unprompted referral.</li>
           </ul>
         </div>
         <div class="bblock dd">
@@ -380,10 +386,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
     <!-- B2 -->
     <div class="bh reveal">
-      <div class="bh-head"><span class="bn">B2</span><h3>Indie game devs &amp; jammers</h3><span class="badge parallel">Parallel</span></div>
-      <p class="who"><b>Win with free tooling and jam presence.</b> Solo and small teams constantly need creatures and
-        props Mixamo can't touch, and jammers are on 48&ndash;72h clocks where &ldquo;rig + idle loop in two minutes&rdquo;
-        is the difference between shipping and not. Land-grab with a free Unity/Godot plugin; monetize a pro/commercial tier later.</p>
+      <div class="bh-head"><span class="bn">B2</span><h3>Indie game devs &amp; jammers</h3><span class="badge parallel">Funnel · 3rd in sequence</span></div>
+      <p class="who"><b>Distribution, not revenue.</b> A free Unity/Godot plugin is the cheapest way to put the engine in
+        thousands of hands and generate proof + word-of-mouth — but conversion to paid is the weak link, so don't bank
+        on it for cash. Land free; monetize a <b>$15&ndash;25/mo commercial seat</b> later. Honest caveat: jam-grade
+        &ldquo;rig + idle loop&rdquo; is in reach; full locomotion is not yet, so scope the promise to idle.</p>
       <div class="bh-grid">
         <div class="bblock">
           <div class="h">Where to find them</div>
@@ -436,10 +443,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
     <!-- B3 -->
     <div class="bh reveal">
-      <div class="bh-head"><span class="bn">B3</span><h3>Tabletop VTT tokens &amp; minis</h3><span class="badge parallel">Parallel</span></div>
-      <p class="who"><b>The easiest quality bar we'll face.</b> Tokens are ~100% non-human and the animation need is a
-        single 4-second idle loop. There's a <b>proven Patreon market</b> (Beneos, Happy Tokenz). Sell to creators who
-        resell — or run our own Patreon — built on batch throughput.</p>
+      <div class="bh-head"><span class="bn">B3</span><h3>Tabletop VTT tokens &amp; minis</h3><span class="badge good">Run first · cash &amp; engine proof</span></div>
+      <p class="who"><b>The easiest quality bar we'll face, and the fastest dollar.</b> Tokens are ~100% non-human and
+        the need is one 4-sec idle loop — exactly what ships today, no locomotion required. Proven paid market
+        (Beneos-scale token Patreons run <b>$5&ndash;20k/mo</b>). Concrete deliverable: a looping <b>WebM / APNG token,
+        ~256&ndash;512px, top-down</b>, drag-drop into Foundry. Run this first to prove the engine and bank revenue.</p>
       <div class="bh-grid">
         <div class="bblock">
           <div class="h">Where to find them</div>
@@ -449,26 +457,25 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
           </div>
         </div>
         <div class="bblock">
-          <div class="h">The test offer</div>
+          <div class="h">The test offer (two paths)</div>
           <ul>
-            <li>Batch pipeline: <b>static token → animated idle loop</b> at volume.</li>
-            <li>Pilot with 3&ndash;5 existing token creators on a rev-share or flat fee.</li>
+            <li><b>Own Patreon:</b> animated token packs at <b>$5&ndash;8/mo</b> — fastest to first dollar.</li>
+            <li><b>License to creators:</b> run their backlog through the batch pipeline for a <b>20&ndash;30% rev-share</b>.</li>
           </ul>
         </div>
         <div class="bblock">
-          <div class="h">Primary metrics</div>
+          <div class="h">First 10 customers</div>
           <ul>
-            <li><b>Cost / time per animated token</b> vs hand-made.</li>
-            <li><b>Throughput</b> at the quality bar (tokens/day).</li>
-            <li>Creator adoption &amp; <b>end-GM download</b> pull.</li>
+            <li>Drop a free 10-token animated pack in r/FoundryVTT + Foundry Discord; gate the rest behind Patreon.</li>
+            <li>DM 5 existing token creators with a sample of <i>their own</i> art, animated.</li>
           </ul>
         </div>
         <div class="bblock">
-          <div class="h">Targets to clear</div>
+          <div class="h">Targets by week 6</div>
           <ul>
-            <li>≥ <b>10×</b> faster than hand-made at acceptable quality.</li>
-            <li>≥ <b>2</b> creators move a real pack through the pipeline.</li>
-            <li>Early <b>Patreon MRR</b> or a paid pack.</li>
+            <li>≥ <b>30</b> animated tokens/day at the quality bar (vs ~2&ndash;3 hand-made).</li>
+            <li><b>$300&ndash;500 MRR</b> from Patreon <i>or</i> 1 signed creator rev-share.</li>
+            <li>GM downloads climbing pack-over-pack.</li>
           </ul>
         </div>
         <div class="bblock dd">
@@ -511,10 +518,54 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
   </div>
 </section>
 
+<!-- UNIT ECONOMICS -->
+<section id="econ">
+  <div class="wrap">
+    <span class="eyebrow reveal">04 · Unit economics</span>
+    <div class="sec-head reveal"><h2 class="title">Is a rig a business? The math, per beachhead</h2></div>
+    <p class="lead reveal">A wedge only matters if the unit economics work. Figures below are <b>working assumptions to
+      validate in weeks 0&ndash;2</b>, not gospel — but they're what ranks the beachheads. The pattern is clear:
+      compute-per-rig is cheap, so margin is high everywhere; the real variable is <b>price the market will bear</b> and
+      <b>how fast you reach a paying customer</b>.</p>
+
+    <div class="tbl-wrap reveal">
+      <table>
+        <thead><tr><th>Beachhead</th><th>Market pays today</th><th>We charge</th><th>Cost to serve*</th><th>Path to first $1k MRR</th></tr></thead>
+        <tbody>
+          <tr><td><b>Tokens</b> <span class="badge good" style="margin-left:4px">first</span></td>
+            <td>Packs $5&ndash;15; top Patreons $5&ndash;20k/mo</td>
+            <td><span class="mono">$5&ndash;8/mo</span> Patreon, or 20&ndash;30% rev-share</td>
+            <td>pennies / token</td>
+            <td class="tgt">~150&ndash;200 subs <i>or</i> 1&ndash;2 creator deals</td></tr>
+          <tr><td><b>Avatars</b> <span class="badge primary" style="margin-left:4px">lead</span></td>
+            <td>Anthro commission $300&ndash;1,500; rig step alone $80&ndash;300</td>
+            <td><span class="mono">$40&ndash;80</span>/rig or <span class="mono">$80&ndash;150</span>/avatar</td>
+            <td>~$1&ndash;3 compute / rig</td>
+            <td class="tgt">~15&ndash;25 paid rigs / mo</td></tr>
+          <tr><td><b>Game devs</b> <span class="badge parallel" style="margin-left:4px">funnel</span></td>
+            <td>Rig gigs $50&ndash;300; asset-store tools $20&ndash;60 once</td>
+            <td>Free → <span class="mono">$15&ndash;25/mo</span> commercial seat</td>
+            <td>compute / rig</td>
+            <td class="tgt">~50&ndash;70 pro seats (hard — it's a funnel)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="dim reveal" style="font-size:.78rem;font-family:var(--mono);margin-top:10px">*Cost-to-serve is the single biggest assumption to nail in week 0 — measure real GPU-seconds per rig before trusting any margin here.</p>
+
+    <div class="callout reveal">
+      <div class="h">What the math says to do</div>
+      <p><b>Cheapest dollar = tokens</b> (run first; it funds everything). <b>Biggest dollar per customer = avatars</b>
+        (the lead bet, once positioning is settled). <b>Game devs are distribution, not revenue</b> — never let plugin
+        installs masquerade as traction. If avatar compute-per-rig comes in above ~$5, the $40 price still works; if
+        token quality needs heavy per-token cleanup, the cheap-dollar thesis breaks — that's the number to watch.</p>
+    </div>
+  </div>
+</section>
+
 <!-- METRICS -->
 <section id="metrics">
   <div class="wrap">
-    <span class="eyebrow reveal">04 · Measurement framework</span>
+    <span class="eyebrow reveal">05 · Measurement framework</span>
     <div class="sec-head reveal"><h2 class="title">One north-star, one funnel, every channel</h2></div>
 
     <div class="north reveal">
@@ -564,16 +615,16 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 <!-- TEST PLAN -->
 <section id="plan">
   <div class="wrap">
-    <span class="eyebrow reveal">05 · The test</span>
-    <div class="sec-head reveal"><h2 class="title">An 8-week run to a real decision</h2></div>
+    <span class="eyebrow reveal">06 · The test</span>
+    <div class="sec-head reveal"><h2 class="title">A sequenced 8-week run — tokens for cash, avatars for the bet</h2></div>
     <p class="lead reveal">Tight, instrumented, and biased toward putting <b>real paid work</b> through the engine — not
-      demos. Pricing is part of the experiment, not an afterthought.</p>
+      demos. One paid push at a time; pricing is part of the experiment, not an afterthought.</p>
 
     <div class="timeline reveal">
-      <div class="tl"><div class="wk">Week 0</div><div class="body"><h4>Instrument &amp; recruit</h4><p>Define the accept-quality bar with examples. Stand up event tracking for the funnel. Line up 10&ndash;20 design partners per beachhead from the channels in §03.</p></div></div>
-      <div class="tl"><div class="wk">Weeks 1&ndash;2</div><div class="body"><h4>Ship the minimal offer</h4><p>B1: rig-as-a-service intake. B2: plugin alpha into one jam. B3: batch pipeline for 3&ndash;5 token creators. Each should let a partner get one real asset out.</p></div></div>
-      <div class="tl"><div class="wk">Weeks 3&ndash;6</div><div class="body"><h4>Run real work through it</h4><p>Push paid client jobs (B1), jam projects (B2), and token packs (B3). Capture rig-success-rate by topology, activation, repeat, and actual payment. Test 2&ndash;3 price points.</p></div></div>
-      <div class="tl"><div class="wk">Weeks 7&ndash;8</div><div class="body"><h4>Decision gate</h4><p>Score each beachhead against the gate below. Concentrate on one; keep at most one parallel; kill the rest cleanly.</p></div></div>
+      <div class="tl"><div class="wk">Week 0</div><div class="body"><h4>Instrument &amp; recruit</h4><p>Nail the two numbers everything rests on: <b>GPU-seconds per rig</b> (cost-to-serve) and the concrete <b>accept-quality bar</b> per beachhead. Stand up funnel tracking. Line up 5 token creators and 30 avatar artists/buyers.</p></div></div>
+      <div class="tl"><div class="wk">Weeks 1&ndash;2</div><div class="body"><h4>Push tokens, probe avatars</h4><p><b>Paid push:</b> ship the token Patreon + one creator rev-share. <b>In parallel (discovery only):</b> run the B1 positioning A/B — free rigs to artists vs. finished avatars to end-users — to see which buyer pulls. No game-dev work yet.</p></div></div>
+      <div class="tl"><div class="wk">Weeks 3&ndash;6</div><div class="body"><h4>Scale what converts, charge for avatars</h4><p>Grow the token line toward <b>$300&ndash;500 MRR</b>. Flip the winning avatar positioning to <b>real money</b> (≥10 paid). Capture rig-success-rate by topology, repeat, and payment. Defer the game-dev plugin.</p></div></div>
+      <div class="tl"><div class="wk">Weeks 7&ndash;8</div><div class="body"><h4>Decision gate</h4><p>Score against the gate below. Commit to the <b>one</b> lead beachhead; spin up the game-dev funnel only if the engine has clearly proven out. Kill the rest cleanly.</p></div></div>
     </div>
 
     <div class="split reveal" style="margin-top:30px">
@@ -599,10 +650,52 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
   </div>
 </section>
 
+<!-- HARD TRUTHS -->
+<section id="risks">
+  <div class="wrap">
+    <span class="eyebrow reveal">07 · Hard truths</span>
+    <div class="sec-head reveal"><h2 class="title">Five things that could kill this — and the test that de-risks each</h2></div>
+    <p class="lead reveal">A strategy is only honest if it names what could break it. Each risk below has a concrete
+      experiment attached; if the experiment fails, that's signal, not failure.</p>
+
+    <div class="grid-2 reveal" style="margin-top:26px">
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:8px">1 · Avatar artists see us as a <span style="color:var(--bad)">threat</span></h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">We automate exactly what they charge for; they may refuse to adopt us.
+          <b style="color:var(--ink)">De-risk:</b> A/B two B1 positionings in weeks 1&ndash;4 — artist margin-expander vs. direct-to-end-user. Whichever pulls <i>is</i> the real B1; if neither does, B1 isn't ready and tokens carry the quarter.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:8px">2 · VRChat is mostly <span style="color:var(--warm)">humanoid</span> under the fur</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Anthro avatars ride a Unity-Humanoid armature; pure feral quadrupeds are a smaller niche.
+          <b style="color:var(--ink)">De-risk:</b> Measure success against the concrete VRC-ready bar (Humanoid map + visemes + PhysBones), and decide early whether we're chasing the feral niche or the anthro mainstream.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:8px">3 · &ldquo;Motion in minutes&rdquo; <span style="color:var(--warm)">outruns the tech</span></h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Rigging (SkinTokens) is solid; believable locomotion is hard and the 4D path is heavy / no-loops / ~28 min per clip.
+          <b style="color:var(--ink)">De-risk:</b> Sell only what ships today — <b style="color:var(--ink)">rig + idle loop</b>. Scope every promise to idle until robust looped locomotion exists. This is why tokens (idle-only) lead.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:8px">4 · The wedge is <span style="color:var(--bad)">copyable</span></h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Meshy or Anything World could add non-human rigging.
+          <b style="color:var(--ink)">De-risk:</b> Instrument which moat candidate is actually forming — plugin lock-in, community brand, or coverage data (§01). If by week 12 none is, we've proven a feature, not a company, and should rethink.</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:1.05rem;margin-bottom:8px">5 · A small team <span style="color:var(--bad)">spread thin</span></h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Three GTMs + engine work = all three done badly.
+          <b style="color:var(--ink)">De-risk:</b> One paid push at a time (§02). Tokens now, avatars next, game-dev funnel last. Shared discovery is fine; shared <i>go-to-market focus</i> is not.</p>
+      </div>
+      <div class="card" style="border-color:rgba(124,196,255,.25)">
+        <h4 style="font-size:1.05rem;margin-bottom:8px">Why-now, in one line</h4>
+        <p class="muted" style="font-size:.9rem;font-weight:300">Generation got cheap and good, so the bottleneck moved <i>downstream</i> to rigging &amp; motion — and the incumbents there are all biped-only. The window is the gap between &ldquo;everyone can make a mesh&rdquo; and &ldquo;someone can rig the weird ones at volume.&rdquo; It won't stay open forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- DECISION GATE -->
 <section id="gate">
   <div class="wrap">
-    <span class="eyebrow reveal">06 · The decision</span>
+    <span class="eyebrow reveal">08 · The decision</span>
     <div class="sec-head reveal"><h2 class="title">Scale, iterate, or fold</h2></div>
     <p class="lead reveal">At week 8, every beachhead lands in exactly one column. Be disciplined: a beloved demo that
       won't convert is a <i>fold</i>, not an iterate.</p>
@@ -638,10 +731,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 
     <div class="callout reveal">
       <div class="h">Default expectation</div>
-      <p>The base case is that <b>B1 (non-human avatars)</b> is the wedge — densest demand, jank-tolerant, clearest
-        painkiller. Run <b>B3 (tokens)</b> in parallel as the easiest quality win and earliest revenue, and treat
-        <b>B2 (game devs)</b> as the top-of-funnel land-grab. Hold the <b>animated pet twin</b> as the consumer breakout
-        for when the engine and channels are proven.</p>
+      <p>The base case: <b>tokens (B3)</b> bank the first revenue and prove the engine in weeks 1&ndash;6, while the
+        <b>avatar (B1)</b> positioning A/B runs in discovery. By week 8 the <b>lead bet is avatars</b> — densest demand,
+        highest $/customer — <i>provided</i> a buyer clearly pulled; if not, tokens become the lead and avatars go back
+        to the bench. <b>Game devs (B2)</b> spin up only after, as a funnel. Hold the <b>animated pet twin</b> as the
+        consumer breakout for once the engine and channels are proven.</p>
     </div>
   </div>
 </section>
@@ -649,7 +743,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;margin-top:50px;position:
 <!-- SINGAPORE -->
 <section id="sg">
   <div class="wrap">
-    <span class="eyebrow reveal">07 · Geography &amp; focus</span>
+    <span class="eyebrow reveal">09 · Geography &amp; focus</span>
     <div class="sec-head reveal"><h2 class="title">Singapore is no disadvantage</h2></div>
     <p class="lead reveal">These communities are global and digital-native, payment rails work from SG, and a no-name
       student team starts with a <b>cost edge</b> and a <b>timezone advantage</b> over the biggest avatar market on
